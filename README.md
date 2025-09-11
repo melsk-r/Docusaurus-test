@@ -1,6 +1,6 @@
 # Docusaurus-test
 
-De door mij doorlopen stappen:
+De door mij doorlopen stappen om docusaurus aan de praat te krijgen:
 
 1. Ik ben gestart bij een lege repository;
 2. Die heb ik m.b.v. GitHub desktop lokaal gehaald;
