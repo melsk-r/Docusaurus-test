@@ -11,7 +11,7 @@ De door mij doorlopen stappen om docusaurus aan de praat te krijgen:
 6. In het bestand 'my-website/docusaurus.config.js' heb ik de property 'baseUrl' gewijzigd van '/' in '/Docusaurus-test/';
 7. In het 'my-website/.gitignore' bestand heb ik de ignore op de '/build' folder uitgeschakeld;
 8. Daarna alles naar de remote repo geschreven;
-9. Daar heb ik tenslotte GitHub Pages geconfigureerd zodat deze build vanaf de 'main' brannch en de 'docs' folder;
+9. Daar heb ik tenslotte GitHub Pages geconfigureerd zodat deze build vanaf de 'main' branch en de 'docs' folder;
 10. Na builden kan de docusuarus site bekeken worden op de url die door GitHub Pages wordt aangegeven;
 
 ## Docusaurus builden en deployen met een Action script
