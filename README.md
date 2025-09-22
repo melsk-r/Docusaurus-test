@@ -9,10 +9,11 @@ De door mij doorlopen stappen om docusaurus aan de praat te krijgen:
 4. Vervolgens heb ik daar ook 'npm run build' gedraaid wat resulteerde in een 'build' folder in de 'my-website' folder;
 5. Deze folder heb ik verplaatst naar de root van de repo en daar hernoemd naar 'docs';
 6. In het bestand 'my-website/docusaurus.config.js' heb ik de property 'baseUrl' gewijzigd van '/' in '/Docusaurus-test/';
-7. In het 'my-website/.gitignore' bestand heb ik de ignore op de '/build' folder uitgeschakeld;
+7. In het 'my-website/.gitignore' bestand heb ik de ignore op de '/build' folder uitgeschakeld;<br/>
+   <i>Dit had denk ik niet gemoeten want deze folder is in stap 5 al gekopieerd naar de 'docs' folder. &lt;-- <b>Ongedaan maken</b></i>
 8. Daarna alles naar de remote repo geschreven;
 9. Daar heb ik tenslotte GitHub Pages geconfigureerd zodat deze build vanaf de 'main' branch en de 'docs' folder;
-10. Na builden kan de docusuarus site bekeken worden op de url die door GitHub Pages wordt aangegeven;
+10. Na builden kan de docusaurus site bekeken worden op de url die door GitHub Pages wordt aangegeven;
 
 ## Docusaurus builden en deployen met een Action script
 De Docusaurus site voor GEMMA Zaken wordt gebuild en gedeployed m.b.v. een Action script. Om er voor te zorgen dat er een Action script gebruikt kan worden voor het deployen van de GitHub Pages site moet je in _'Settings/Pages'_ bij _'Build and deployment - Source'_ kiezen voor _'**GitHub Actions**'_.
@@ -21,7 +22,7 @@ Plaats daarna de file `deploy.yml` in de folder `\.github\workflows` met de volg
 1. on:
 2.   push:
 3.     branches:
-4.       - main
+4.       - master
 5.       - documentatie-update
 6.   workflow_dispatch:
 7.
@@ -60,7 +61,7 @@ Plaats daarna de file `deploy.yml` in de folder `\.github\workflows` met de volg
 ```
 Regelnummers horen natuurlijk niet in het bestand thuis.
 
-* Het toevoegen van de branchnamen in de regels 4 en 5 zorgt er voor dat de workflow opgestart kan worden voor zowel de master als de documentatie-update branch. Daarvoor moet dit bestand wel in beide branches in `\.github\workflows` worden geplaatst. Hebben je branches andere namen gebruik die dan en natuurlijk mag er ook alleen de 'main' branch staan. Het lijkt er trouwens op dat die branch er minimaal moet staan.
+* Het toevoegen van de branchnamen in de regels 4 en 5 zorgt er voor dat de workflow opgestart kan worden voor zowel de master als de documentatie-update branch. Daarvoor moet dit bestand wel in beide branches in `\.github\workflows` worden geplaatst. Hebben je branches andere namen gebruik die dan en natuurlijk mag er ook alleen de 'master' (of in andere repo's de 'main') branch staan. Het lijkt er trouwens op dat die branch er minimaal moet staan.
 * De string  `workflow_dispatch:` in regel 6 zorgt er voor dat de workflow handmatig opgestart kan worden.
 
 
