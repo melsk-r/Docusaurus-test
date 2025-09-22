@@ -14,6 +14,8 @@ De door mij doorlopen stappen om docusaurus aan de praat te krijgen:
 9. Na builden kan de docusaurus site bekeken worden op de url die door GitHub Pages wordt aangegeven;
 
 ## Docusaurus builden en deployen met een Action script
+**LET OP!**: _In deze paragraaf wil ik beschrijven hoe je het builden en deployen op de remote repository kunt laten uitvoeren m.b.v. een Actionscript. Onderstaand verhaal werkt echter alleen nog maar voor de gemma-zaken repository. Er moet dus nog uitgezocht worden hoe het ook op andere repositories geïmplementeerd moet worden._
+
 De Docusaurus site voor GEMMA Zaken wordt gebuild en gedeployed m.b.v. een Action script. Om er voor te zorgen dat er een Action script gebruikt kan worden voor het deployen van de GitHub Pages site moet je in _'Settings/Pages'_ bij _'Build and deployment - Source'_ kiezen voor _'**GitHub Actions**'_.
 Plaats daarna de file `deploy.yml` in de folder `\.github\workflows` met de volgende inhoud:
 ```
