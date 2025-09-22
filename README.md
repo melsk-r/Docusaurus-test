@@ -21,7 +21,7 @@ Plaats daarna de file `deploy.yml` in de folder `\.github\workflows` met de volg
 1. on:
 2.   push:
 3.     branches:
-4.       - master
+4.       - main
 5.       - documentatie-update
 6.   workflow_dispatch:
 7.
@@ -60,7 +60,7 @@ Plaats daarna de file `deploy.yml` in de folder `\.github\workflows` met de volg
 ```
 Regelnummers horen natuurlijk niet in het bestand thuis.
 
-* Het toevoegen van de branchnamen in de regels 4 en 5 zorgt er voor dat de workflow opgestart kan worden voor zowel de master als de documentatie-update branch. Daarvoor moet dit bestand wel in beide branches in `\.github\workflows` worden geplaatst. Hebben je branches andere namen gebruik die dan en natuurlijk mag er ook alleen de 'master' (of eigenlijk 'main') branch staan. Het lijkt er echter wel op dat die branch er zeker moet staan.
+* Het toevoegen van de branchnamen in de regels 4 en 5 zorgt er voor dat de workflow opgestart kan worden voor zowel de master als de documentatie-update branch. Daarvoor moet dit bestand wel in beide branches in `\.github\workflows` worden geplaatst. Hebben je branches andere namen gebruik die dan en natuurlijk mag er ook alleen de 'main' branch staan. Het lijkt er trouens op dat die branch er minimaal moet staan.
 * De string  `workflow_dispatch:` in regel 6 zorgt er voor dat de workflow handmatig opgestart kan worden.
 
 
