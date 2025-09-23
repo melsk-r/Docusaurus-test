@@ -69,4 +69,4 @@ Regelnummers horen natuurlijk niet in het bestand thuis.
 Indien m.b.v. `npm run docusaurus docs:version [versienummer]` een versie van de website is gemaakt en de versie blijkt achteraf niet correct te zijn dan kun je natuurlijk altijd opnieuw dat commando uitvoeren met het juiste versienummer. Mocht dat lastig zijn kun je echter het versienummer ook wijzigen door de volgende aanpassingen aan te brengen:
 * Wijzig het versienummer in het bestand ´[Repository-naam]\my-website\versions.json´;
 * Wijzig het versienummer in de foldernaam ´[Repository-naam]\my-website\versioned_docs\version-[versienummer]´;
-* Wijzig het versienummer in de bestandsnaam ´[Repository-naam]\my-website\versioned_sidebars<version-[versienummer]-sidebars.json´.
+* Wijzig het versienummer in de bestandsnaam ´[Repository-naam]\my-website\versioned_sidebars\version-[versienummer]-sidebars.json´.
