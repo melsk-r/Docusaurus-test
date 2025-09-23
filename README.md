@@ -11,7 +11,7 @@ De door mij doorlopen stappen om docusaurus aan de praat te krijgen:
 6. In het bestand 'my-website/docusaurus.config.js' heb ik de property 'baseUrl' gewijzigd van '/' in '/Docusaurus-test/';
 7. Daarna alles naar de remote repo geschreven;
 8. Daar heb ik tenslotte GitHub Pages geconfigureerd zodat deze build vanaf de 'main' branch en de 'docs' folder;
-9. Na builden kan de docusaurus site bekeken worden op de url die door GitHub Pages wordt aangegeven;
+9. Na builden kan de docusaurus site bekeken worden op de url die door GitHub Pages wordt aangegeven.
 
 ## Docusaurus builden en deployen met een Action script
 **LET OP!**: _In deze paragraaf wil ik beschrijven hoe je het builden en deployen op de remote repository kunt laten uitvoeren m.b.v. een Actionscript. Onderstaand verhaal werkt echter alleen nog maar voor de gemma-zaken repository. Er moet dus nog uitgezocht worden hoe het ook op andere repositories geïmplementeerd moet worden._
@@ -66,7 +66,7 @@ Regelnummers horen natuurlijk niet in het bestand thuis.
 
 ## Versions
 
-Indien m.b.v. `npm run docusaurus docs:version 1.0` een versie van de website is gemaakt en de versie blijkt achteraf niet correct te zijn dan kun je natuurlijk altijd opnieuw dat commando uitvoeren met het juiste versienummer. Je kunt echter het versienummer ook wijzigen door de volgende aanpassingen aan te brengen:
-* Wijzig het versienummer in het bestand ´[Repository-naam]\my-website\versions.json´
-* Wijzig het versienummer in de foldernaam ´[Repository-naam]\my-website\versioned_docs\version-[versienummer]´
-* Wijzig het versienummer in de bestandsnaam ´[Repository-naam]\my-website\versioned_sidebars<version-[versienummer]-sidebars.json´
+Indien m.b.v. `npm run docusaurus docs:version [versienummer]` een versie van de website is gemaakt en de versie blijkt achteraf niet correct te zijn dan kun je natuurlijk altijd opnieuw dat commando uitvoeren met het juiste versienummer. Mocht dat lastig zijn kun je echter het versienummer ook wijzigen door de volgende aanpassingen aan te brengen:
+* Wijzig het versienummer in het bestand ´[Repository-naam]\my-website\versions.json´;
+* Wijzig het versienummer in de foldernaam ´[Repository-naam]\my-website\versioned_docs\version-[versienummer]´;
+* Wijzig het versienummer in de bestandsnaam ´[Repository-naam]\my-website\versioned_sidebars<version-[versienummer]-sidebars.json´.
