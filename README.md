@@ -108,20 +108,7 @@ buiten beschouwing laten, als volgt uit:
 ```
 GEMMA-Zaken
 ├── api-specs
-    ├── v1
-        ├── autorisaties
 ├── api-specificatie
-    ├── _deprecated
-    ├── ac
-    ├── brc
-    ├── contactmomenten-api
-    ├── DESIGN
-    ├── drc
-    ├── klanten-api
-    ├── nrc
-    ├── verzoeken-api
-    ├── zrc
-    ├── ztc
 ├── docs
     ├── unversioned
         ├── adrs
@@ -146,7 +133,7 @@ GEMMA-Zaken
 Laten we de folders even een voor 1 aflopen.
 
 **api-specs**<br/>
-Deze folder lijkt geen rol te spelen bij het genereren van de site. Wijzigingen aangebracht in de OAS specificatie `api-specs/v1/autorisaties/openapi.yaml` leiden nl. niet tot wijzigingen in de site. Dat is ook niet het geval na een handmatige rebuild van de site.
+Deze folder en diens subfolders (hier niet weergegeven) lijken geen rol te spelen bij het genereren van de site. Wijzigingen aangebracht in de OAS specificatie `api-specs/v1/autorisaties/openapi.yaml` leiden nl. niet tot wijzigingen in de site. Dat is ook niet het geval na een handmatige rebuild van de site.
 
 **api-specificatie**<br/>
 Hetzelfde lijkt te gelden voor deze folder.
