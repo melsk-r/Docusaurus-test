@@ -17,7 +17,7 @@
 
 3. De structuur van de Docusaurus site moet voldoen aan de in '[Uniformering GitHub Pages](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Uniformering/Index.md)' beschreven structuur. Zo nodig kan natuurlijk besloten die structuur aan te passen aan de nieuwe fuhctionaliteit.
 
-Op dit moment heb ik nog niet het gevoel dat aan voorwaarde 2 kan worden voldaan. De werking van Docusaurus is nog niet echt intuïtief en ondoorgrondelijk. Ik kan het in ieder geval nog niemand uitleggen.
+Op dit moment heb ik nog niet het gevoel dat aan voorwaarde 2 kan worden voldaan. De werking van Docusaurus is voor zover ik nu kan beoordelen niet echt intuïtief, complex en zelfs enigzins ondoorgrondelijk. Ik kan het in ieder geval nog niemand uitleggen. Daarnaast vind ik een nadeel van Docusaurus dat de configuratie van het top navigatie menu niet centraal gebeurd wat bij Jekyll wel het geval is, tenminste voor zover ik nu kan overzien is dat niet mogelijk. Voor de ZGW site is nu gekozen voor een top navigatie menu die alleen betrekking heeft op de ZGW API's. In de Jekyll versie maakt de ZGW site echter onderdeel uit van het grotere geheel van de VNG Realisatie Standaarden portaal. 
 
 ## Spelen met Docusaurus
 
