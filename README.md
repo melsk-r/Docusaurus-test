@@ -107,40 +107,47 @@ De folderstructuur van de ZGW Docusaurus GitHub repo ziet er, als we de folders
 buiten beschouwing laten, als volgt uit:
 ```
 GEMMA-Zaken
-├── api-specs
-    ├── v1
-        ├── autorisaties
-├── api-specificatie
-    ├── _deprecated
-    ├── ac
-    ├── brc
-    ├── contactmomenten-api
-    ├── DESIGN
-    ├── drc
-    ├── klanten-api
-    ├── nrc
-    ├── verzoeken-api
-    ├── zrc
-    ├── ztc
-├── docs
-    ├── unversioned
-        ├── adrs
-        ├── community
-        ├── gids
-    ├── v1
-        ├── autorisaties
-├── sidebars
-├── src
-    ├── components
-        ├── HomepageFeature
-    ├── css
-    ├── pages
-├── static
-    ├── img
-├── v1_versioned_docs
-    ├── version-1.5.1
-        ├── autorisaties
-├── v1_versioned_sidebars
+1.  ├── api-specs
+2.      ├── v1
+3.          ├── autorisaties
+4.  ├── api-specificatie
+5.      ├── _deprecated
+6.      ├── ac
+7.      ├── brc
+8.      ├── contactmomenten-api
+9.      ├── DESIGN
+10.     ├── drc
+11.     ├── klanten-api
+12.     ├── nrc
+13.     ├── verzoeken-api
+14.     ├── zrc
+15.     ├── ztc
+16. ├── docs
+17.     ├── unversioned
+18.         ├── adrs
+19.         ├── community
+20.         ├── gids
+21.     ├── v1
+22.         ├── autorisaties
+23. ├── sidebars
+24. ├── src
+25.     ├── components
+26.         ├── HomepageFeature
+27.     ├── css
+28.     ├── pages
+29. ├── static
+30.     ├── img
+31. ├── v1_versioned_docs
+32.     ├── version-1.5.1
+33.         ├── autorisaties
+34. ├── v1_versioned_sidebars
 ```
 
+Laten we de folders even een voor 1 aflopen.
+**api-specs**
+Deze folder lijkt geen rol te spelen bij het genereren van de site. Wijzigingen aangebracht in de OAS specificatie `api-specs/v1/autorisaties/openapi.yaml` leiden nl. niet tot wijzigingen in de site. Dat is ook niet het geval na een handmatige rebuild van de site.
 
+**api-specificatie**
+Hetzelfde lijkt te gelden voor deze folder.
+
+**docs**
