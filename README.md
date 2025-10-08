@@ -139,7 +139,7 @@ Deze folder en diens subfolders (hier niet weergegeven) lijken geen rol te spele
 
 In het Docusaurus configuratiebestand `docusaurus.config.ts` staat echter:
 
-```
+```yaml
 1.     [
 2.       "docusaurus-plugin-openapi-docs",
 3.       {
@@ -159,7 +159,8 @@ In het Docusaurus configuratiebestand `docusaurus.config.ts` staat echter:
 17.    ],
 18.  ],
 ```
-Ik vermoed dat deze code iets te maken heeft met het vertalen van de `openapi.yaml' naar de MDX bestanden in de `docs/v1/autorisatie` folder. Toch worden de MDX bestanden niet geüpdate als ik een nieuwe build maak.
+Ik vermoed dat deze code iets te maken heeft met het vertalen van de `openapi.yaml' naar de MDX bestanden in de `docs/v1/autorisatie` folder. Regel 8 verwijst dan naar
+Toch worden de MDX bestanden niet geüpdate als ik een nieuwe build maak.
 
 **api-specificatie**<br/>
 Deze folder en diens subfolders (hier niet weergegeven) lijken geen rol te spelen bij het genereren van de site. Wijzigingen aangebracht in de OAS specificatie `api-specificatie/ac/openapi.yaml` leiden nl. niet tot wijzigingen in de site. Dat is ook niet het geval na een handmatige rebuild van de site.
@@ -172,10 +173,32 @@ Naar de bestanden `index.md` in de subfolders `docs/unversioned/community` en `d
 
 De bestanden in de folder de folder `docs/v1/autorisaties` zijn gerelateerd aan API versie 1.6.0. 
 Hoe de MDX bestanden vervaardigd zijn is nog de vraag. Vermoedelijk en ook hopelijk zijn deze gegenereerd. Hoe moet nog uitgezocht worden.
-Het bestand `sidebar.ts` lijkt geen rol te spelen.
+Op het eveneens in deze folder aanwezige bestand `sidebar.ts` kom ik hieronder terug.
 
 **sidebars**<br/>
-Het bestand `v1.ts` configureert de sidebar die verschijnt als wordt gekozen voor versie 1.6.0 van de API specificaties. Overigens wordt in dit bestand niet alleen de side bar geconfigureert maar ook de body van de pagina voor de categorie niveau's van de side bar.
+Het bestand `v1.ts` configureert de sidebar die verschijnt als wordt gekozen voor versie 1.6.0 van de API specificaties. Overigens wordt in dit bestand niet alleen de side bar geconfigureert maar ook de body van de pagina voor de categorie niveau's van de side bar. Verder wordt in dit betand het bestand `docs/v1/autorisaties/sidebar.ts` geïmporteerd.
+
+Ik heb getest of ik die import kon uitschakelen maar dat is om de e.o.a. reden nog niet gelukt. Waarom niet is me niet duidelijk. Het is i.i.g. niet envoudig het vervangen van
+
+``` yaml
+          type: "category",
+          label: "Autorisaties API",
+          link: {
+            type: "generated-index",
+            title: "Autorisaties API",
+            description:
+              "This is a sample server Petstore server. You can find out more about Swagger at http://swagger.io or on irc.freenode.net, #swagger. For this sample, you can use the api key special-key to test the authorization filters.",
+            slug: "/category/autorisaties-api",
+          },
+          items: require("../docs/v1/autorisaties/sidebar.ts"),
+```
+door
+``` yaml
+          type: "doc",
+          id: "index",
+```
+
+Ook het bestand `unversioned.ts' staat in deze folder. Het configureert de sidebar voor de pagina's die in de folder `docs/unversioned' staan. Dus voor de situaties als in de top navigatie gekozen is voor 'Gids' en 'Community' of in de footer voor 'Over de ZGW API standaard', 'Besluitenlogboek', 'Doe mee', 'Contact' en 'Praktijkvoorbeelden'.
 
 **src**<br/>
 
