@@ -144,6 +144,7 @@ In de onderliggende folders van deze folder vinden we een aantal markdown bestan
 In de subfolder `docs/unversioned` staan bestanden die onafhankelijk zijn van een van de API versies. Om te beginnen 3 markdown bestanden waar in de footer van de site naar verwezen wordt. Voor het markdown bestand in de subfolder `docs/unversioned/adrs` geldt hetzelfde.
 Naar de bestanden `index.md` in de subfolders `docs/unversioned/community` en `docs/unversioned/gids` wordt vanuit de top navigatie items 'Gids' en 'Community' gelinkt. De andere bestanden in deze folders kunnen daarna benadert worden via de side navigatie.
 
+De bestanden in de folder de folder `docs/v1/autorisaties` zijn gerelateerd aan API versie 1.6.0. 
 Hoe de MDX bestanden vervaardigd zijn is nog de vraag. Vermoedelijk en ook hopelijk zijn deze gegenereerd. Hoe moet nog uitgezocht worden.
 Het bestand `sidebar.ts` lijkt geen rol te spelen.
 
