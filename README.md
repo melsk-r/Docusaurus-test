@@ -93,12 +93,20 @@ Indien m.b.v. `npm run docusaurus docs:version [versienummer]` een versie van de
 * Wijzig het versienummer in de bestandsnaam ´[Repository-naam]\my-website\versioned_sidebars\version-[versienummer]-sidebars.json´.
 
 ### Experimenteren met de ZGW Docusaurus site
-De folderstructuur van de ZGW Docusaurus GitHub repo ziet er, als we de folders '.devcontainer', '.docusaurus', '.git', '.vscode', 'archive', 'build', 'node_modules' en 'tools' buiten beschouwing laten, als volgt uit:
+De folderstructuur van de ZGW Docusaurus GitHub repo ziet er, als we de folders 
+* .devcontainer
+* .docusaurus
+* .git
+* .github
+* .vscode
+* archive
+* build
+* node_modules
+* tools
 
+buiten beschouwing laten, als volgt uit:
 ```
 GEMMA-Zaken
-├── .github
-    ├── workflows
 ├── api-specs
     ├── v1
         ├── autorisaties
