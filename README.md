@@ -17,7 +17,11 @@
 
 Op dit moment heb ik nog niet het gevoel dat aan voorwaarde 2 kan worden voldaan. De werking van Docusaurus is nog niet echt intuïtief en ondoorgrondelijk. Ik kan het in ieder geval nog niemand uitleggen.
 
-## Docusaurus basics
+## Spelen met Docusaurus
+
+### Eigen probeersels
+
+#### Docusaurus basics
 De door mij doorlopen stappen om docusaurus aan de praat te krijgen:
 
 1. Ik ben gestart bij een lege repository;
@@ -30,7 +34,7 @@ De door mij doorlopen stappen om docusaurus aan de praat te krijgen:
 8. Daar heb ik tenslotte GitHub Pages geconfigureerd zodat deze build vanaf de 'main' branch en de 'docs' folder;
 9. Na builden kan de docusaurus site bekeken worden op de url die door GitHub Pages wordt aangegeven.
 
-## Docusaurus builden en deployen met een Action script
+#### Docusaurus builden en deployen met een Action script
 **LET OP!**: _In deze paragraaf wil ik beschrijven hoe je het builden en deployen op de remote repository kunt laten uitvoeren m.b.v. een Actionscript. Onderstaand verhaal werkt echter alleen nog maar voor de gemma-zaken repository. Er moet dus nog uitgezocht worden hoe het ook op andere repositories geïmplementeerd moet worden._
 
 De Docusaurus site voor GEMMA Zaken wordt gebuild en gedeployed m.b.v. een Action script. Om er voor te zorgen dat er een Action script gebruikt kan worden voor het deployen van de GitHub Pages site moet je in _'Settings/Pages'_ bij _'Build and deployment - Source'_ kiezen voor _'**GitHub Actions**'_.
@@ -81,9 +85,13 @@ Regelnummers horen natuurlijk niet in het bestand thuis.
 * Het toevoegen van de branchnamen in de regels 4 en 5 zorgt er voor dat de workflow opgestart kan worden voor zowel de master als de documentatie-update branch. Daarvoor moet dit bestand wel in beide branches in `\.github\workflows` worden geplaatst. Hebben je branches andere namen gebruik die dan en natuurlijk mag er ook alleen de 'master' (of in andere repo's de 'main') branch staan. Het lijkt er trouwens op dat die branch er minimaal moet staan.
 * De string  `workflow_dispatch:` in regel 6 zorgt er voor dat de workflow handmatig opgestart kan worden.
 
-## Versions
+#### Versions
 
 Indien m.b.v. `npm run docusaurus docs:version [versienummer]` een versie van de website is gemaakt en de versie blijkt achteraf niet correct te zijn dan kun je natuurlijk altijd opnieuw dat commando uitvoeren met het juiste versienummer. Mocht dat lastig zijn kun je echter het versienummer ook wijzigen door de volgende aanpassingen aan te brengen:
 * Wijzig het versienummer in het bestand ´[Repository-naam]\my-website\versions.json´;
 * Wijzig het versienummer in de foldernaam ´[Repository-naam]\my-website\versioned_docs\version-[versienummer]´;
 * Wijzig het versienummer in de bestandsnaam ´[Repository-naam]\my-website\versioned_sidebars\version-[versienummer]-sidebars.json´.
+
+### Experimenteren met de ZGW Docusaurus site
+
+
