@@ -145,13 +145,13 @@ GEMMA-Zaken
 
 Laten we de folders even een voor 1 aflopen.
 
-**api-specs**
+**api-specs**<br/>
 Deze folder lijkt geen rol te spelen bij het genereren van de site. Wijzigingen aangebracht in de OAS specificatie `api-specs/v1/autorisaties/openapi.yaml` leiden nl. niet tot wijzigingen in de site. Dat is ook niet het geval na een handmatige rebuild van de site.
 
-**api-specificatie**
+**api-specificatie**<br/>
 Hetzelfde lijkt te gelden voor deze folder.
 
-**docs**
+**docs**<br/>
 In de onderliggende folders van deze folder vinden we een aantal markdown bestanden maar in de folder `docs/v1/autorisaties` ook een aantal MDX bestanden (een formaat dat Markdown-tekst combineert met JSX-componenten oftewel JavaScript XML componenten wat een syntaxisuitbreiding is voor JavaScript die het mogelijk maakt om HTML-achtige code te schrijven binnen JavaScript-bestanden) alsmede het bestand `sidebar.ts`.
 
 In de subfolder `docs/unversioned` staan 3 markdown bestanden waar in de footer van de site naar verwezen wordt. Voor het markdown bestand in de subfolder 1 `docs/unversioned/adrs` geldt hetzelfde.
@@ -160,13 +160,13 @@ Naar de bestanden `index.md` in de subfolders `docs/unversioned/community` en `d
 Hoe de MDX bestanden vervaardigd zijn is nog de vraag. Vermoedelijk en ook hopelijk zijn deze gegenereerd. Hoe moet nog uitgezocht worden.
 Het bestand `sidebar.ts` lijkt geen rol te spelen.
 
-**sidebars**
+**sidebars**<br/>
 
-**src**
+**src**<br/>
 
-**static**
+**static**<br/>
 
-**v1_versioned_docs**
+**v1_versioned_docs**<br/>
 
-**v1_versioned_sidebars**
+**v1_versioned_sidebars**<br/>
 
