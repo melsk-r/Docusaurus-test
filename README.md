@@ -137,8 +137,32 @@ Laten we de folders even een voor 1 aflopen.
 **api-specs**<br/>
 Deze folder en diens subfolders (hier niet weergegeven) lijken geen rol te spelen bij het genereren van de site. Wijzigingen aangebracht in de OAS specificatie `api-specs/v1/autorisaties/openapi.yaml` leiden nl. niet tot wijzigingen in de site. Dat is ook niet het geval na een handmatige rebuild van de site.
 
+In het Docusaurus configuratiebestand `docusaurus.config.ts` staat echter:
+
+```
+1.     [
+2.       "docusaurus-plugin-openapi-docs",
+3.       {
+4.         id: "openapi",
+5.         docsPluginId: "v1",
+6.         config: {
+7.           autorisaties: {
+8.             specPath: "api_specs/v1/autorisaties/openapi.yaml",
+9.             outputDir: "docs/v1/autorisaties",
+10.            sidebarOptions: {
+11.              groupPathsBy: "tag",
+12.              categoryLinkSource: "tag",
+13.            },
+14.          } satisfies OpenApiPlugin.Options,
+15.        },
+16.      } satisfies Plugin.PluginOptions,
+17.    ],
+18.  ],
+```
+Ik vermoed dat deze code iets te maken heeft met het vertalen van de `openapi.yaml' naar de MDX bestanden in de `docs/v1/autorisatie` folder. Toch worden de MDX bestanden niet geüpdate als ik een nieuwe build maak.
+
 **api-specificatie**<br/>
-Hetzelfde lijkt te gelden voor deze folder.
+Deze folder en diens subfolders (hier niet weergegeven) lijken geen rol te spelen bij het genereren van de site. Wijzigingen aangebracht in de OAS specificatie `api-specificatie/ac/openapi.yaml` leiden nl. niet tot wijzigingen in de site. Dat is ook niet het geval na een handmatige rebuild van de site.
 
 **docs**<br/>
 In de onderliggende folders van deze folder vinden we een aantal markdown bestanden maar in de folder `docs/v1/autorisaties` ook een aantal MDX bestanden (een formaat dat Markdown-tekst combineert met JSX-componenten oftewel JavaScript XML componenten wat een syntaxisuitbreiding is voor JavaScript die het mogelijk maakt om HTML-achtige code te schrijven binnen JavaScript-bestanden) alsmede het bestand `sidebar.ts`.
@@ -151,6 +175,7 @@ Hoe de MDX bestanden vervaardigd zijn is nog de vraag. Vermoedelijk en ook hopel
 Het bestand `sidebar.ts` lijkt geen rol te spelen.
 
 **sidebars**<br/>
+Het bestand `v1.ts` configureert de sidebar die verschijnt als wordt gekozen voor versie 1.6.0 van de API specificaties. Overigens wordt in dit bestand niet alleen de side bar geconfigureert maar ook de body van de pagina voor de categorie niveau's van de side bar.
 
 **src**<br/>
 
