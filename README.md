@@ -198,7 +198,29 @@ door
           id: "index",
 ```
 
-Ook het bestand `unversioned.ts' staat in deze folder. Het configureert de sidebar voor de pagina's die in de folder `docs/unversioned' staan. Dus voor de situaties als in de top navigatie gekozen is voor 'Gids' en 'Community' of in de footer voor 'Over de ZGW API standaard', 'Besluitenlogboek', 'Doe mee', 'Contact' en 'Praktijkvoorbeelden'.
+Ook het bestand `unversioned.ts' staat in deze folder. Het configureert de sidebar voor de pagina's die in de folder `docs/unversioned' staan. Dus voor de situaties als in de top navigatie gekozen is voor 'Gids' en 'Community' of in de footer voor 'Over de ZGW API standaard', 'Besluitenlogboek', 'Doe mee', 'Contact' en 'Praktijkvoorbeelden'. Het koppelen van dit sidebar bestand aan alles in die folder gebeurd in `docusaurus.config.ts`. Daar staat nl.
+
+```yaml
+1.    presets: [
+2.      [
+3.        "@docusaurus/preset-classic",
+4.        {
+5.          docs: {
+6.            // id: "default", // ommitted, because it's the default docs instance
+7.            path: "docs/unversioned",
+8.            routeBasePath: "/",
+9.            sidebarPath: require.resolve("./sidebars/unversioned.ts"),
+10.           remarkPlugins: [
+11.             ...
+12.           ],
+13.         },
+14.         ...
+15.         },
+16.       } satisfies Preset.Options,
+17.     ],
+18.   ],
+```
+M.n. de regels 7 en 9 zijn hierbij van belang. De functie `require.resolve` in regel 9 doet overigens niets meer dan het absolute path naar `sidebars/unversioned.ts` teruggeven.
 
 **src**<br/>
 
