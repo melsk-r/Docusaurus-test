@@ -15,6 +15,8 @@
    We moeten niet willen dat collega's zich eerst diep in Docusaurus moeten verdiepen voordat ze er een site mee kunnen genereren. Liefst creëren we een template op basis waarvan redelijk eenvoudig een site in elkaar te zetten is.
    Daarbij moet bepaalde functionaliteit eenvoudig aan of uitgezet kunnen worden.
 
+3. De structuur van de Docusaurus site moet voldoen aan de in '[Uniformering GitHub Pages](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Uniformering/Index.md)' beschreven structuur. Zo nodig kan natuurlijk besloten die structuur aan te passen aan de nieuwe fuhctionaliteit.
+
 Op dit moment heb ik nog niet het gevoel dat aan voorwaarde 2 kan worden voldaan. De werking van Docusaurus is nog niet echt intuïtief en ondoorgrondelijk. Ik kan het in ieder geval nog niemand uitleggen.
 
 ## Spelen met Docusaurus
