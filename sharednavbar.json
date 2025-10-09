@@ -1,8 +1,8 @@
 [
   {
-    type: 'dropdown',
-    label: 'Gids',
-    position: 'left',
+    type: "dropdown",
+    label: "Gids",
+    position: "left",
     items: [
       {
         type: "doc",
