@@ -1,20 +1,9 @@
 [
   {
-    type: "dropdown",
-    label: "Gids",
+    type: "doc",
+    docId: "gids/tools",
     position: "left",
-    items: [
-      {
-        type: "doc",
-        docId: "gids/gids",
-        label: "Gids",
-      },
-      {
-        type: "doc",
-        docId: "gids/tools",
-        label: "Tools",
-      },
-    ],
+    label: "Gids",
   },
   {
     type: "doc",
