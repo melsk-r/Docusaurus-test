@@ -251,8 +251,64 @@ M.n. de regels 7 en 9 zijn hierbij van belang. De functie `require.resolve` in r
 ```
 
 **src**<br/>
-De startpagina van het Classic Docusaurus theme, het enige dat op dit moment beschikbaar is, bestaat uit 3 delen±
+De startpagina van het Classic Docusaurus theme, het enige dat op dit moment beschikbaar is, bestaat uit 3 delen:
+* Een headerframe met daarin o.a. de top navigatie en de button om naar de verschillende versies van de ZGW-API specificaties te gaan;
+* Een footerframe bestaande uit de brede grijze balk onderaan met daarin de 3 kolommen 'Standaard', 'Project' en 'Context';
+* Het tussen deze beide frames gelegen bodyframe met daarin inhoudelijke componenten.
 
+Het headerframe en bodyframe is alleen op deze pagina te zien. Het Footerframe blijft altijd zichtbaar.
+
+De vulling van het bodyframe wordt in de folder 'src' geregeld. 
+* Het bestand `src/components/HonepageFeatures/index.js` bevat Javascript code waarmee het Feature deel van het bodyframe wordt gevuld. De teksten, de titels en de bijbehorende images van de features worden hier gedefinieerd;
+* Het bestand `src/pages/index.js` combineert het resultaat van het voorgaande bestand met de andere in de bodyframe voorkomende componenten. Daarbij wordt o.a gebruik gemaakt van enkele in het bestand `docusaurus.config.ts` geconfigureerde properties.
+
+Door aan het laatste bestand de functie `ZGWtopnavigatie'
+
+```javascript
+function ZGWtopnavigatie() {
+  const { siteConfig } = useDocusaurusContext();
+  return (
+      <div>
+			<div>
+			  <Link className="button button--secondary" to="/">
+				ZGW API's
+			  </Link>&nbsp;&nbsp;&nbsp;
+			  <Link className="button button--secondary" to="/gids/tools">
+				Gids
+			  </Link>&nbsp;&nbsp;&nbsp;
+			  <Link className="button button--secondary" to="/v1/next">
+				API Suite
+			  </Link>&nbsp;&nbsp;&nbsp;
+			  <Link className="button button--secondary" to="/community">
+				Community
+			  </Link>
+			</div>
+      </div>
+  );
+}
+```
+
+toe te voegen en de functie Home() uit te breiden met het element 'ZGWtopnavigatie'
+
+```javascript
+export default function Home() {
+  const { siteConfig } = useDocusaurusContext();
+  return (
+    <Layout
+      title={`Home | ${siteConfig.title}`}
+      description="Description will go into a meta tag in <head />"
+    >
+      <ZGWtopnavigatie />
+      <HomepageHeader />
+      <main>
+        <HomepageFeatures />
+      </main>
+    </Layout>
+  );
+}
+```
+
+Lukt het om een extra topnavigatie niveau toe te voegen waarmee de standaard topnavigatie gebruikt zou kunnen worden voor de VNG-Realisatie Standaarden portaal functie. Helaas is deze alleen op deze pagina beschikbaar.
 
 **static**<br/>
 
