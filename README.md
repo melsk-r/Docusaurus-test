@@ -178,7 +178,7 @@ Op het eveneens in deze folder aanwezige bestand `sidebar.ts` kom ik hieronder t
 **sidebars**<br/>
 Het bestand `v1.ts` configureert de sidebar die verschijnt als wordt gekozen voor versie 1.6.0 van de API specificaties. Overigens wordt in dit bestand niet alleen de side bar geconfigureert maar ook de body van de pagina voor de categorie niveau's van de side bar. Verder wordt in dit betand het bestand `docs/v1/autorisaties/sidebar.ts` geïmporteerd.
 
-Ik heb getest of ik die import kon uitschakelen maar dat is om de e.o.a. reden nog niet gelukt. Waarom niet is me niet duidelijk. Het is i.i.g. niet envoudig het vervangen van
+Ik heb getest of ik die import kon uitschakelen maar dat is om de e.o.a. reden nog niet gelukt. Waarom niet is me niet duidelijk. Het is i.i.g. niet eenvoudig het vervangen van
 
 ``` yaml
           type: "category",
