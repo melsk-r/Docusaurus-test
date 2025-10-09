@@ -8,10 +8,10 @@
  "items": [
     {
       "type": "dropdown", "label": "Informatiemodellen", "position": "left", "items": [
-        { "href": "https://vng-realisatie.github.io/Standaarden/Informatiemodellen", "aria-label": "Wat is een Informatiemodel?" },
-        { "href": "https://vng-realisatie.github.io/RSGB/", "aria-label": "RSGB" },
-        { "href": "https://vng-realisatie.github.io/RGBZ/", "aria-label": "RGBZ" },
-        { "href": "https://vng-realisatie.github.io/ImZTC/", "aria-label": "ImZTC" }
+        { "href": "https://vng-realisatie.github.io/Standaarden/Informatiemodellen", "label": "Wat is een Informatiemodel?" },
+        { "href": "https://vng-realisatie.github.io/RSGB/", "label": "RSGB" },
+        { "href": "https://vng-realisatie.github.io/RGBZ/", "label": "RGBZ" },
+        { "href": "https://vng-realisatie.github.io/ImZTC/", "label": "ImZTC" }
       ]
     },
     { "type": "doc", "docId": "gids/tools", "position": "left", "label": "Gids"  },
