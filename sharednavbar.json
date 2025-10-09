@@ -1,12 +1,12 @@
 [
   {
-    "title: "ZGW API's",
+    "title": "ZGW API's",
     "logo": {
       "alt": "VNG logo",
       "src": "img/vng_logo.svg",
       "srcDark": "img/vng_logo_alt.svg"
     },
-    items: [
+   "items": [
       {
         "type": "dropdown", "label": "Gids", "position": "left", "items": [
           { "type": "doc", "docId": "gids/gids", "label": "Gids" },
