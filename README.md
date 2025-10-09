@@ -21,14 +21,17 @@
 4. De top navigatie moet centraal geconfigureerd en beheerd kunnen worden.
    De ZGW implementeert nu een top navigatie die alleen betrekking heeft op de ZGW API standaarden. De ZGW API standaarden maken echter deel uit van een familie van VNG Realisatie standaarden en de topnavigatie vormt een portaal van waaruit je de GitHub Pages sites van al die standaarden kunt bereiken.
 
-Op dit moment heb ik nog niet het gevoel dat aan voorwaarde 2 en 3 kan worden voldaan. 
-* De werking van Docusaurus is voor zover ik nu kan beoordelen niet echt intuïtief, complex en zelfs enigzins ondoorgrondelijk. Ik kan het in ieder geval nog niet goed en eenvoudig uitleggen;
-* De configuratie van het top navigatie menu gebeurd niet centraal, tenminste voor zover ik nu kan overzien.
-  Bij Jekyll is dat wel het geval. Daar wordt door de GitHub repositories die Jekyll implementeren gebruik gemaakt van Jekyll themes waarin de top navigatie is geconfigureerd.
-  Voor de ZGW site is nu gekozen voor een top navigatie menu die alleen betrekking heeft op de ZGW API's. In de Jekyll versie maakt de ZGW site echter onderdeel uit van het grotere geheel van de VNG Realisatie Standaarden portaal. Natuurlijk kunnen we dat in Docusaurus ook realiseren maar dat heeft 3 nadelen:
-  -  Het topnavigatiemenu moet in elke GitHub repo die Docusaurus implementeert apart geconfigureerd worden wat foutgevoelig is. Bij die configuratie kunnen fouten gemaakt worden waardoor de topnavigatie bij de ene Docusaurus site afwijkt van die van de andere.
-  -  Als er wijzigingen in de topnavigatie moeten worden aangebracht moeten deze worden doorgevoerd in alle GitHub repositories waarmee Docusaurus wordt geïmplementeerd.
-  Daarnaast
+Op dit moment wordt n.m.m. nog niet aan voorwaarde 2, 3 en 4 voldaan. 
+
+2. De werking van Docusaurus is voor zover ik nu kan beoordelen niet echt intuïtief, complex en zelfs enigzins ondoorgrondelijk. Ik kan het in ieder geval nog niet goed en eenvoudig uitleggen;
+3. De structuur zoals nu opgezet voor ZGW voldoet niet aan wat is vastgelegd in '[Uniformering GitHub Pages](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Uniformering/Index.md)'.
+   Voor de ZGW site is nu gekozen voor een top navigatie menu die alleen betrekking heeft op de ZGW API's. In de Jekyll versie maakt de ZGW site echter onderdeel uit van het grotere geheel van de VNG Realisatie Standaarden portaal. Natuurlijk kunnen we dat in Docusaurus ook realiseren maar dat heeft 3 nadelen:
+4. De configuratie van het top navigatie menu gebeurd niet centraal, tenminste voor zover ik nu kan overzien.
+   Bij Jekyll is dat wel het geval. Daar wordt door de GitHub repositories die Jekyll implementeren gebruik gemaakt van Jekyll themes waarin de top navigatie is geconfigureerd.
+   Dat de top navigatie niet centraal geconfigureerd kan worden heeft de volgende nadelen:
+   -  Het topnavigatiemenu moet in elke GitHub repo die Docusaurus implementeert apart geconfigureerd worden wat foutgevoelig is. Bij die configuratie kunnen fouten gemaakt worden waardoor de topnavigatie bij de ene Docusaurus site afwijkt van die van de andere.
+   -  Als er wijzigingen in de topnavigatie moeten worden aangebracht moeten deze worden doorgevoerd in alle GitHub repositories waarmee Docusaurus wordt geïmplementeerd.
+  
 
 ## Spelen met Docusaurus
 
