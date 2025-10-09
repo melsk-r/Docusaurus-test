@@ -1,4 +1,4 @@
-# Docusaurus-test
+# Analyse Docusaurus implementatie voor ZGW en uitrol naar andere repositories
 
 ## Voorwaarden voor een evt. invoering van Docusaurus
 
