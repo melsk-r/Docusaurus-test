@@ -9,6 +9,7 @@
     {
       "type": "dropdown", "label": "Informatiemodellen", "position": "left", "items": [
         { "label": "Wat is een Informatiemodel?", "href": "https://vng-realisatie.github.io/Standaarden/Informatiemodellen" },
+        { "type": "html", "value": "<hr/>" },
         { "label": "RSGB", "href": "https://vng-realisatie.github.io/RSGB/" },
         { "label": "RGBZ", "href": "https://vng-realisatie.github.io/RGBZ/" },
         { "label": "ImZTC", "href": "https://vng-realisatie.github.io/ImZTC/" }
