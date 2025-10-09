@@ -1,4 +1,4 @@
-{
+[
   "title": "ZGW API's",
   "logo": {
     "alt": "VNG logo",
@@ -18,4 +18,4 @@
     { "type": "docsVersionDropdown", "docsPluginId": "v1", "position": "right" },
     { "href": "https://github.com/vng-realisatie/gemma-zaken", "position": "right", "className": "header-github-link", "aria-label": "GitHub repository" }
   ]
-}
+]
