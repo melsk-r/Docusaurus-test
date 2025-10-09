@@ -1,53 +1,43 @@
 [
   {
-    title: "ZGW API's",
-    logo: {
-      alt: "VNG logo",
-      src: "img/vng_logo.svg",
-      srcDark: "img/vng_logo_alt.svg",
-    },
+    type: 'dropdown',
+    label: 'Gids',
+    position: 'left',
     items: [
-    {
-        type: 'dropdown',
-        label: 'Gids',
-        position: 'left',
-        items: [
-    {
-      type: "doc",
-      docId: "gids/gids",
-      label: "Gids",
-    },
-    {
-      type: "doc",
-      docId: "gids/tools",
-      label: "Tools",
-    },
+      {
+        type: "doc",
+        docId: "gids/gids",
+        label: "Gids",
+      },
+      {
+        type: "doc",
+        docId: "gids/tools",
+        label: "Tools",
+      },
     ],
   },
-      {
-        type: "doc",
-        docId: "index",
-        position: "left",
-        label: "API Suite",
-        docsPluginId: "v1",
-      },
-      {
-        type: "doc",
-        docId: "community/index",
-        position: "left",
-        label: "Community",
-      },
-      {
-        type: "docsVersionDropdown",
-        docsPluginId: "v1",
-        position: "right",
-      },
-      {
-        href: "https://github.com/vng-realisatie/gemma-zaken",
-        position: "right",
-        className: "header-github-link",
-        "aria-label": "GitHub repository",
-      },
-    ],
+  {
+    type: "doc",
+    docId: "index",
+    position: "left",
+    label: "API Suite",
+    docsPluginId: "v1",
+  },
+  {
+    type: "doc",
+    docId: "community/index",
+    position: "left",
+    label: "Community",
+  },
+  {
+    type: "docsVersionDropdown",
+    docsPluginId: "v1",
+    position: "right",
+  },
+  {
+    href: "https://github.com/vng-realisatie/gemma-zaken",
+    position: "right",
+    className: "header-github-link",
+    "aria-label": "GitHub repository",
   },
 ]
