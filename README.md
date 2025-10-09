@@ -33,9 +33,9 @@ Op dit moment wordt n.m.m. nog niet aan voorwaarde 2, 3 en 4 voldaan.
    -  Als er wijzigingen in de topnavigatie moeten worden aangebracht moeten deze worden doorgevoerd in alle GitHub repositories waarmee Docusaurus wordt geïmplementeerd.
   
 
-## Spelen met Docusaurus
+## Verkenningen van Docusaurus
 
-### Eigen probeersels
+### Experimenten vanaf scratch
 
 #### Docusaurus basics
 De door mij doorlopen stappen om docusaurus aan de praat te krijgen:
@@ -108,7 +108,7 @@ Indien m.b.v. `npm run docusaurus docs:version [versienummer]` een versie van de
 * Wijzig het versienummer in de foldernaam ´[Repository-naam]\my-website\versioned_docs\version-[versienummer]´;
 * Wijzig het versienummer in de bestandsnaam ´[Repository-naam]\my-website\versioned_sidebars\version-[versienummer]-sidebars.json´.
 
-### Experimenteren met de ZGW Docusaurus site
+### Experimenteren met de ZGW-AP's Docusaurus site
 De folderstructuur van de ZGW Docusaurus GitHub repo ziet er, als we de folders 
 * .devcontainer
 * .docusaurus
