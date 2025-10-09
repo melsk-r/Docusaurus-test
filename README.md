@@ -220,7 +220,21 @@ Ook het bestand `unversioned.ts' staat in deze folder. Het configureert de sideb
 17.     ],
 18.   ],
 ```
-M.n. de regels 7 en 9 zijn hierbij van belang. De functie `require.resolve` in regel 9 doet overigens niets meer dan het absolute path naar `sidebars/unversioned.ts` teruggeven.
+M.n. de regels 7 en 9 zijn hierbij van belang. De functie `require.resolve` in regel 9 doet overigens niets meer dan het absolute path naar `sidebars/unversioned.ts` teruggeven. M.b.t. het bestand `v1.ts` gebeurd eigenlijk hetzelfde in `docusaurus.config.ts`.
+
+```yaml
+1.   plugins: [
+2.      [
+3.        "@docusaurus/plugin-content-docs",
+4.        {
+5.          id: "v1",
+6.          path: "docs/v1",
+7.          routeBasePath: "v1/",
+8.          sidebarPath: "./sidebars/v1.ts",
+9.          ...
+10.       } satisfies Plugin.PluginOptions,
+11.     ],
+```
 
 **src**<br/>
 
