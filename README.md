@@ -249,6 +249,7 @@ M.n. de regels 7 en 9 zijn hierbij van belang. De functie `require.resolve` in r
 10.       } satisfies Plugin.PluginOptions,
 11.     ],
 ```
+Zie regels 6 en 8.
 
 **src**<br/>
 De startpagina van het Classic Docusaurus theme, het enige dat op dit moment beschikbaar is, bestaat uit 3 delen:
@@ -311,6 +312,7 @@ export default function Home() {
 Lukt het om een extra topnavigatie niveau toe te voegen waarmee de standaard topnavigatie gebruikt zou kunnen worden voor de VNG-Realisatie Standaarden portaal functie. Helaas is deze alleen op deze pagina beschikbaar.
 
 **static**<br/>
+De folder `static/img` bevat de diverse in de site gebruikte svg bestanden.
 
 **v1_versioned_docs**<br/>
 
