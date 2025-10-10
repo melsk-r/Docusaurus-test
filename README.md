@@ -346,7 +346,7 @@ Op de volgende wijze kan de configuratie van de top navigatie centraal geregeld 
    ```yaml
    navbar: {},
    ```
-3. Wijzig de functie
+2. Wijzig de functie
    ```yaml
    export default async function createConfig() {
      return config;
@@ -390,8 +390,57 @@ Op de volgende wijze kan de configuratie van de top navigatie centraal geregeld 
    }
    ```
    Waarbij `https://raw.githubusercontent.com/melsk-r/Docusaurus-test/main/sharednavbar.json` natuurlijk verwijst naar het raw json bestand dat je wil verwijzen. Ook de content van de fallback items hier is natuurlijk maar een voorbeeld.
-3. 
-   
+3. Creëer een json bestand op een centrale plaats waar je in stap 2 naar verwijst met als inhoud de configuratie van de top navigatie, bijv:
+   ```
+	{
+	  "title": "VNG Realisatie Standaarden",
+	  "logo": {
+	    "alt": "VNG logo",
+	    "src": "img/vng_logo.svg",
+	    "srcDark": "img/vng_logo_alt.svg"
+	  },
+	 "items": [
+	    {
+	      "type": "dropdown", "label": "Informatiemodellen", "position": "left", "items": [
+	        { "label": "Wat is een Informatiemodel?", "href": "https://vng-realisatie.github.io/Standaarden/Informatiemodellen" },
+	        { "type": "html", "value": "<hr/>" },
+	        { "label": "RSGB", "href": "https://vng-realisatie.github.io/RSGB/" },
+	        { "label": "RGBZ", "href": "https://vng-realisatie.github.io/RGBZ/" },
+	        { "label": "ImZTC", "href": "https://vng-realisatie.github.io/ImZTC/" }
+	      ]
+	    },
+	    {
+	      "type": "dropdown", "label": "API-standaarden", "position": "left", "items": [
+	        { "label": "Wat is een API-standaard?", "href": "https://vng-realisatie.github.io/Standaarden/Informatiemodellen" },
+	        { "type": "html", "value": "<hr/>" },
+	        { "label": "Zaakgericht Werken", "href": "https://vng-realisatie.github.io/gemma-zaken/" },
+	        { "label": "Klantinteracties", "href": "https://vng-realisatie.github.io/klantinteracties/" },
+	        { "label": "IMWOZ-Bevragingen", "href": "https://vng-realisatie.github.io/IMWOZ-bevragingen/" },
+	        { "label": "Open Raadsinformatie", "href": "https://vng-realisatie.github.io/ODS-Open-Raadsinformatie/" },
+	        { "label": "Regels bij Activiteiten", "href": "https://vng-realisatie.github.io/Regels-bij-activiteiten/" }
+	      ]
+	    },
+	    {
+	      "type": "dropdown", "label": "StUF-standaarden", "position": "left", "items": [
+	        { "label": "Wat is een StUF-standaard?", "href": "https://vng-realisatie.github.io/Standaarden/StUF-standaarden" },
+	        { "type": "html", "value": "<hr/>" },
+	        { "label": "Basis- en kerngegevens", "href": "https://vng-realisatie.github.io/Standaarden/Basis-en-kerngegevens" },
+	        { "label": "Zaken en documenten", "href": "https://vng-realisatie.github.io/Standaarden/Zaken-en-documenten" },
+	        { "label": "Dienstverleningsdomein", "href": "https://vng-realisatie.github.io/Standaarden/Dienstverleningsdomein" },
+	        { "label": "Ruimtelijk domein", "href": "https://vng-realisatie.github.io/Standaarden/Ruimtelijk-domein" },
+	        { "label": "Sociaal domein", "href": "https://vng-realisatie.github.io/Standaarden/Sociaal-domein" },
+	        { "label": "Bedrijfsvoeringsdomein", "href": "https://vng-realisatie.github.io/Standaarden/Bedrijfsvoeringsdomein" },
+	        { "label": "Gerelateerde standaarden", "href": "https://vng-realisatie.github.io/Standaarden/Gerelateerde-standaarden" }
+	      ]
+	    },
+	    { "type": "docsVersionDropdown", "docsPluginId": "v1", "position": "right" },
+	    { "href": "https://github.com/vng-realisatie/gemma-zaken", "position": "right", "className": "header-github-link", "aria-label": "GitHub repository" }
+	  ]
+	}   
+   ```
+   **LET OP!** Dit moet echt json zijn en geen yaml.
+
+Bij opnieuw builden van de site krijg je nu een top navigatie te zien die centraal kan worden beheerd.
 
 
  
