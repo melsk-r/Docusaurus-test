@@ -270,7 +270,7 @@ In deze folder staat het bestand `version-1.5.1-sidebars.json` waarin de sidebar
 #### Root folder
 
 ### Experimenteren met de ZGW-AP's Docusaurus site
-Van de repository [new-gemma-zaken](https://melsk-r.github.io/new-gemma-zaken/]  dat een kopie is van de repository die we in de voorgaand eparagraaf geanalyseerd hebben, is een aantal experimentengedaan met als doel dichter bij de aan het begin van dit document beschreven voorwaarden te komen.
+Van de repository [new-gemma-zaken](https://melsk-r.github.io/new-gemma-zaken/)  dat een kopie is van de repository die we in de voorgaand eparagraaf geanalyseerd hebben, is een aantal experimentengedaan met als doel dichter bij de aan het begin van dit document beschreven voorwaarden te komen.
 
 #### sidebars
 Ik heb getest of ik de import van het bestand `docs/v1/autorisaties/sidebar.ts` in het bestand `v1.ts` kon uitschakelen maar dat is om de e.o.a. reden (nog) niet gelukt. Waarom niet is me niet duidelijk. Het is i.i.g. niet eenvoudig het vervangen van
