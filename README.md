@@ -16,7 +16,7 @@
    Daarbij moet bepaalde functionaliteit eenvoudig aan of uitgezet kunnen worden.
 
 3. De structuur van de Docusaurus site moet voldoen aan de in '[Uniformering GitHub Pages](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Uniformering/Index.md)' beschreven structuur.
-   Zo nodig kan natuurlijk besloten worden die structuur aan te passen aan de nieuwe fuhctionaliteit.
+   Zo nodig kan natuurlijk besloten worden die structuur aan te passen aan de nieuwe fuhctionaliteit. De navigatiestructuur vanuit de top navigatie mag niet ineens zonder een evident voordeel sterk wijzigen, liefst blijft deze ongeveer gelijk en dus herkenbaar. Gebruikers zijn immers gewend aan de huidige structuur en vinden daarin hun weg.
 
 4. De top navigatie moet centraal geconfigureerd en beheerd kunnen worden.
    De ZGW implementeert nu een top navigatie die alleen betrekking heeft op de ZGW API standaarden. De ZGW API standaarden maken echter deel uit van een familie van VNG Realisatie standaarden en de topnavigatie vormt een portaal van waaruit je de GitHub Pages sites van al die standaarden kunt bereiken.
