@@ -389,7 +389,7 @@ Op de volgende wijze kan de configuratie van de top navigatie centraal geregeld 
      return config;
    }
    ```
-   Waarbij `https://raw.githubusercontent.com/melsk-r/Docusaurus-test/main/sharednavbar.json` natuurlijk verwijst naar het raw json bestand dat je wil verwijzen. Ook de content van de fallback items hier is natuurlijk maar een voorbeeld.
+   Waarbij `https://raw.githubusercontent.com/melsk-r/Docusaurus-test/main/sharednavbar.json` natuurlijk verwijst naar het raw json bestand dat je wil gebruiken. Ook de content van de fallback items hier is natuurlijk maar een voorbeeld.
 3. Creëer een json bestand op een centrale plaats waar je in stap 2 naar verwijst met als inhoud de configuratie van de top navigatie, bijv:
    ```
 	{
