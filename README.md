@@ -114,6 +114,8 @@ Indien m.b.v. `npm run docusaurus docs:version [versienummer]` een versie van de
 * Wijzig het versienummer in de bestandsnaam ´[Repository-naam]\my-website\versioned_sidebars\version-[versienummer]-sidebars.json´.
 
 ### Analyse ZGW-API's Docusaurus site
+In deze paragraaf analyseren we de werking van Docusaurus zoals is opgezet in deze [gemma-zaken](https://melsk-r.github.io/gemma-zaken/) die een fork is van die van Rutger.
+
 De folderstructuur van de ZGW Docusaurus GitHub repo ziet er, als we de folders 
 * .devcontainer
 * .docusaurus
@@ -268,6 +270,7 @@ In deze folder staat het bestand `version-1.5.1-sidebars.json` waarin de sidebar
 #### Root folder
 
 ### Experimenteren met de ZGW-AP's Docusaurus site
+Van de repository [new-gemma-zaken](https://melsk-r.github.io/new-gemma-zaken/]  dat een kopie is van de repository die we in de voorgaand eparagraaf geanalyseerd hebben, is een aantal experimentengedaan met als doel dichter bij de aan het begin van dit document beschreven voorwaarden te komen.
 
 #### sidebars
 Ik heb getest of ik de import van het bestand `docs/v1/autorisaties/sidebar.ts` in het bestand `v1.ts` kon uitschakelen maar dat is om de e.o.a. reden (nog) niet gelukt. Waarom niet is me niet duidelijk. Het is i.i.g. niet eenvoudig het vervangen van
