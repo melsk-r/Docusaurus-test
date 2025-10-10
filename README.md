@@ -36,7 +36,7 @@ Op dit moment wordt n.m.m. nog niet aan voorwaarde 2, 3 en 4 voldaan.
    -  Het topnavigatiemenu moet in elke GitHub repo die Docusaurus implementeert apart geconfigureerd worden wat foutgevoelig is. Bij die configuratie kunnen fouten gemaakt worden waardoor de topnavigatie bij de ene Docusaurus site afwijkt van die van de andere.
    -  Als er wijzigingen in de topnavigatie moeten worden aangebracht moeten deze worden doorgevoerd in alle GitHub repositories waarmee Docusaurus wordt geïmplementeerd.
 
-   Inmiddels zijn de eerste experimenten om de configuratie van topnavigatie (in de vorm zoals we deze kennen) in een aparte repository te plaatsen en deze op te halen hoopgevend (zie [hier](https://github.com/melsk-r/Docusaurus-test/blob/main/README.md#experimenteren-met-de-zgw-aps-docusaurus-site)). Bij die experimenten staan in die top navigatie balk echter nog steeds componenten die te maken hebben met de ZGW API's en er moet nog uitgezocht worden hoe we dat deel wel lokaal kunnen plaatsen.
+   Inmiddels zijn de eerste experimenten om de configuratie van topnavigatie (in de vorm zoals we deze kennen) in een aparte repository te plaatsen en deze op te halen hoopgevend (zie [hier](https://github.com/melsk-r/Docusaurus-test/blob/main/README.md#experimenteren-met-de-zgw-aps-docusaurus-site)). 
 
 ## Verkenningen van Docusaurus
 
@@ -337,7 +337,11 @@ export default function Home() {
 }
 ```
 
-Lukt het om een extra topnavigatie niveau toe te voegen waarmee de standaard topnavigatie gebruikt zou kunnen worden voor de VNG-Realisatie Standaarden portaal functie. Helaas is deze alleen op deze pagina beschikbaar.
+Lukt het om een extra topnavigatie niveau toe te voegen.
+<img width="284" height="55" alt="image" src="https://github.com/user-attachments/assets/11ecc6d6-d77c-4ff7-910d-4014e18709c7" />
+Daarmee zou de standaard topnavigatie gebruikt kunnen worden voor de VNG-Realisatie Standaarden portaal functie. Helaas is deze extra topnavigatie alleen op deze pagina beschikbaar.
+
+***Actie:*** Kijken hoe we deze extra topnavigatie op alle poagina's kunnen tonen of een alternatief daarvoor verzinnen.
 
 #### Root folder
 Op de volgende wijze kan de configuratie van de top navigatie centraal geregeld worden.
@@ -446,7 +450,10 @@ Op de volgende wijze kan de configuratie van de top navigatie centraal geregeld 
    ```
    **LET OP!** Dit moet echt json formaat zijn, het yaml formaat waarin de top navigatie in het bestand 'docusaurus.config.ts' is geconfigureerd leidt nl. tot fouten.
 
-Bij opnieuw builden van de site krijg je nu een top navigatie te zien die centraal kan worden beheerd.
+Bij opnieuw builden van de site krijg je nu de volgende top navigatie te zien die centraal kan worden beheerd.
 
+Zoals je ziet staan in de top navigatie balk nog steeds componenten die te maken hebben met de ZGW API's en er moet nog uitgezocht worden hoe we dat deel wel lokaal kunnen plaatsen.
+
+***Actie:*** Uitzoeken hoe we de met ZGW-API's gerelateerde componenten in de top navigatie lokaal kunnen plaatsen of hoe we, als we het acceptabel vinden dat die componenten gewoon in de topnaviagtie balk staan, het genereren van de top navigatie zo kunnen inrichten dat deze componenten alleen bij de site van de bijbehorende repositories worden gegenereerd. 
 
  
