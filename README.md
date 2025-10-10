@@ -300,6 +300,9 @@ door
 ```
 
 #### src
+Ik heb hier op verschillende manier gespeeld met de topnavigatie.
+
+***Door een extra navigatiebalk in de body te plaatsen***<br/>
 Door aan het bestand `docusaurus.config.ts` de functie `ZGWtopnavigatie'
 
 ```javascript
@@ -352,7 +355,57 @@ Lukt het om een extra topnavigatie niveau toe te voegen.
 
 Daarmee zou de standaard topnavigatie gebruikt kunnen worden voor de VNG-Realisatie Standaarden portaal functie. Helaas is deze extra topnavigatie alleen op de startpagina van het Classic Docusaurus theme beschikbaar.
 
-***Actie:*** Kijken hoe we deze extra topnavigatie op alle poagina's kunnen tonen of een alternatief daarvoor verzinnen.
+***Actie:*** Kijken hoe we deze extra topnavigatie op alle pagina's kunnen tonen of een alternatief daarvoor verzinnen.
+
+***Door aan de top navigatiebalk een extra regel toe te voegen***<br/>
+Daartoe heb ik aan deze folder `theme/Navbar/index.tsx` toegevoegd. Voor de inhoud heb ik de originele Navbar broncode gekopieerd en aan dat bestand toegevoegd. Daaraan heb ik vervolgens extra code toegevoegd
+
+```
+1.  import React, {type ReactNode} from 'react';
+2.  import NavbarLayout from '@theme/Navbar/Layout';
+3.  import NavbarContent from '@theme/Navbar/Content';
+4.  import Link from '@docusaurus/Link';
+5.  import styles from './extraNavbar.module.css'; // optioneel voor styling
+6.
+7.  export default function Navbar(): ReactNode {
+8.    return (
+9.      <>
+10.       {/* Originele navigatie */}
+11.       <NavbarLayout>
+12.         <NavbarContent />
+13.       </NavbarLayout>
+14.
+15.       {/* Extra regel boven de navigatie */}
+16.       <div className={styles.extraNavbar}>
+17.         Link to="/">ZGW API's</Link>
+18.         <Link to="/gids/tools">Gids</Link>
+19.         <Link to="/v1/next">API Suite</Link>
+20.         <Link to="/community">Community</Link>
+21.       </div>
+22.     </>
+23.   );
+24. }
+```
+Om precies te zijn de regels 4, 5, 9 en 15 t/m 22.
+
+Tevens heb ik het css bestand `extraNavbar.module.css` toegevoegd met de content
+
+```
+.extraNavbar {
+  background-color: #f5f5f5;
+  padding: 0.5rem 1rem;
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  border-bottom: 1px solid #ddd;
+  font-size: 0.9rem;
+}
+```
+Dat geeft het volgende resultaat:
+
+<img width="1390" height="110" alt="image" src="https://github.com/user-attachments/assets/f64f8e3a-13e0-4766-9fe2-f34675c34d04" />
+
+Hiermee bereiken we dat ook deze navigatiebar op elke pagina blijft staan. Wat we nog wel moeten regelen is dat we ook deze navigatiebar kunnen configureren maar dan lokaal.
 
 #### Root folder
 Op de volgende wijze kan de configuratie van de top navigatie centraal geregeld worden.
