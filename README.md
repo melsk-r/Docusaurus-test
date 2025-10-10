@@ -36,7 +36,7 @@ Op dit moment wordt n.m.m. nog niet aan voorwaarde 2, 3 en 4 voldaan.
    -  Het topnavigatiemenu moet in elke GitHub repo die Docusaurus implementeert apart geconfigureerd worden wat foutgevoelig is. Bij die configuratie kunnen fouten gemaakt worden waardoor de topnavigatie bij de ene Docusaurus site afwijkt van die van de andere.
    -  Als er wijzigingen in de topnavigatie moeten worden aangebracht moeten deze worden doorgevoerd in alle GitHub repositories waarmee Docusaurus wordt geïmplementeerd.
 
-   Inmiddels zijn de eerste experimenten om de configuratie van topnavigatie (in de vorm zoals we deze kennen) in een aparte repository te plaatsen en deze op te halen hoopgevend (zie [hier](https://github.com/melsk-r/Docusaurus-test/edit/main/README.md#experimenteren-met-de-zgw-aps-docusaurus-site)). Bij die experimenten staan in die top navigatie balk echter nog steeds componenten die te maken hebben met de ZGW API's en er moet nog uitgezocht worden hoe we dat deel wel lokaal kunnen plaatsen.
+   Inmiddels zijn de eerste experimenten om de configuratie van topnavigatie (in de vorm zoals we deze kennen) in een aparte repository te plaatsen en deze op te halen hoopgevend (zie [hier](https://github.com/melsk-r/Docusaurus-test/blob/main/README.md#experimenteren-met-de-zgw-aps-docusaurus-site)). Bij die experimenten staan in die top navigatie balk echter nog steeds componenten die te maken hebben met de ZGW API's en er moet nog uitgezocht worden hoe we dat deel wel lokaal kunnen plaatsen.
 
 ## Verkenningen van Docusaurus
 
