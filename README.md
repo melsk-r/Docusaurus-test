@@ -151,7 +151,7 @@ GEMMA-Zaken
 ├── v1_versioned_sidebars
 ```
 
-Laten we de folders even een voor 1 aflopen.
+Laten we de folders even één voor één aflopen.
 
 #### api-specs
 Deze folder en diens subfolders (hier niet weergegeven) lijken geen rol te spelen bij het genereren van de site. Wijzigingen aangebracht in de OAS specificatie `api-specs/v1/autorisaties/openapi.yaml` leiden nl. niet tot wijzigingen in de site. Dat is ook niet het geval na een handmatige rebuild van de site.
