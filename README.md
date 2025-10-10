@@ -438,7 +438,7 @@ Op de volgende wijze kan de configuratie van de top navigatie centraal geregeld 
 	  ]
 	}   
    ```
-   **LET OP!** Dit moet echt json formaat zijn, het yaml formaat waarin de top navigatie in het bestand 'docusaurus.config.ts' is geconfigureerd leidt tot fouten.
+   **LET OP!** Dit moet echt json formaat zijn, het yaml formaat waarin de top navigatie in het bestand 'docusaurus.config.ts' is geconfigureerd leidt nl. tot fouten.
 
 Bij opnieuw builden van de site krijg je nu een top navigatie te zien die centraal kan worden beheerd.
 
