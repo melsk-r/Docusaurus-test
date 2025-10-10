@@ -201,26 +201,6 @@ Op het eveneens in deze folder aanwezige bestand `sidebar.ts` kom ik hieronder t
 **sidebars**<br/>
 Het bestand `v1.ts` configureert de sidebar die verschijnt als wordt gekozen voor versie 1.6.0 van de API specificaties. Overigens wordt in dit bestand niet alleen de side bar geconfigureerd maar ook de body van de pagina voor de categorie niveau's van de side bar. Verder wordt in dit bestand het bestand `docs/v1/autorisaties/sidebar.ts` geïmporteerd.
 
-Ik heb getest of ik die import kon uitschakelen maar dat is om de e.o.a. reden (nog) niet gelukt. Waarom niet is me niet duidelijk. Het is i.i.g. niet eenvoudig het vervangen van
-
-``` yaml
-          type: "category",
-          label: "Autorisaties API",
-          link: {
-            type: "generated-index",
-            title: "Autorisaties API",
-            description:
-              "This is a sample server Petstore server. You can find out more about Swagger at http://swagger.io or on irc.freenode.net, #swagger. For this sample, you can use the api key special-key to test the authorization filters.",
-            slug: "/category/autorisaties-api",
-          },
-          items: require("../docs/v1/autorisaties/sidebar.ts"),
-```
-door
-``` yaml
-          type: "doc",
-          id: "index",
-```
-
 Ook het bestand `unversioned.ts' staat in deze folder. Het configureert de sidebar voor de pagina's die in de folder `docs/unversioned' staan. Dus voor de situaties als in de top navigatie gekozen is voor 'Gids' en 'Community' of in de footer voor 'Over de ZGW API standaard', 'Besluitenlogboek', 'Doe mee', 'Contact' en 'Praktijkvoorbeelden'. Het koppelen van dit sidebar bestand aan alles in die folder gebeurd in `docusaurus.config.ts`. Daar staat nl.
 
 ```yaml
@@ -281,7 +261,28 @@ De folder `static/img` bevat de diverse in de site gebruikte svg bestanden.
 
 **Root folder**<br/>
 
-#### Experimenteren met de ZGW-AP's Docusaurus site
+### Experimenteren met de ZGW-AP's Docusaurus site
+
+**sidebars**<br/>
+Ik heb getest of ik de import van het bestand `docs/v1/autorisaties/sidebar.ts` in het bestand `v1.ts` kon uitschakelen maar dat is om de e.o.a. reden (nog) niet gelukt. Waarom niet is me niet duidelijk. Het is i.i.g. niet eenvoudig het vervangen van
+
+``` yaml
+          type: "category",
+          label: "Autorisaties API",
+          link: {
+            type: "generated-index",
+            title: "Autorisaties API",
+            description:
+              "This is a sample server Petstore server. You can find out more about Swagger at http://swagger.io or on irc.freenode.net, #swagger. For this sample, you can use the api key special-key to test the authorization filters.",
+            slug: "/category/autorisaties-api",
+          },
+          items: require("../docs/v1/autorisaties/sidebar.ts"),
+```
+door
+``` yaml
+          type: "doc",
+          id: "index",
+```
 
 **src**<br/>
 Door aan het bestand `docusaurus.config.ts` de functie `ZGWtopnavigatie'
@@ -333,3 +334,64 @@ export default function Home() {
 Lukt het om een extra topnavigatie niveau toe te voegen waarmee de standaard topnavigatie gebruikt zou kunnen worden voor de VNG-Realisatie Standaarden portaal functie. Helaas is deze alleen op deze pagina beschikbaar.
 
 **Root folder**
+Op de volgende wijze kan de configuratie van de top navigatie centraal geregeld worden.
+
+1. Wijzig in het bestand 'docusaurus.config.ts' de navbar property
+   ```yaml
+    navbar: {
+      ...
+    },
+   ```
+   in
+   ```yaml
+   navbar: {},
+   ```
+3. Wijzig de functie
+   ```yaml
+   export default async function createConfig() {
+     return config;
+   }
+   ```
+   in dat zelfde bestand in
+   ```yaml
+   export default async function createConfig(): Promise<Config> {
+     try {
+       const response = await fetch(
+         "https://raw.githubusercontent.com/melsk-r/Docusaurus-test/main/sharednavbar.json"
+       );
+
+       if (!response.ok) {
+         throw new Error(`Fout bij ophalen navbar: ${response.statusText}`);
+       }
+
+       const navbar = await response.json();
+
+       // Injecteer de opgehaalde items in de config
+       config.themeConfig!.navbar = navbar;
+     } catch (error) {
+       console.warn("Kon externe navbar niet ophalen:", error);
+       // Optioneel: fallback items
+       config.themeConfig!.navbar = {
+         navbar: {
+           title: "ZGW API's",
+           logo: {
+             alt: "VNG logo",
+             src: "img/vng_logo.svg",
+             srcDark: "img/vng_logo_alt.svg",
+           },
+           items: [
+             { label: "Fallback", to: "/" },
+	       ],
+	     },
+       };
+     }
+
+     return config;
+   }
+   ```
+   Waarbij `https://raw.githubusercontent.com/melsk-r/Docusaurus-test/main/sharednavbar.json` natuurlijk verwijst naar het raw json bestand dat je wil verwijzen. Ook de content van de fallback items hier is natuurlijk maar een voorbeeld.
+3. 
+   
+
+
+ 
