@@ -341,7 +341,7 @@ Lukt het om een extra topnavigatie niveau toe te voegen.
 
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/11ecc6d6-d77c-4ff7-910d-4014e18709c7" />
 
-Daarmee zou de standaard topnavigatie gebruikt kunnen worden voor de VNG-Realisatie Standaarden portaal functie. Helaas is deze extra topnavigatie alleen op deze pagina beschikbaar.
+Daarmee zou de standaard topnavigatie gebruikt kunnen worden voor de VNG-Realisatie Standaarden portaal functie. Helaas is deze extra topnavigatie alleen op de startpagina van het Classic Docusaurus theme beschikbaar.
 
 ***Actie:*** Kijken hoe we deze extra topnavigatie op alle poagina's kunnen tonen of een alternatief daarvoor verzinnen.
 
