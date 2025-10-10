@@ -2,7 +2,8 @@
 
 ## Voorwaarden voor een evt. invoering van Docusaurus
 
-1. Alle GitHub Pages sites moeten dezelfde vormgeving hebben.
+1. **Gelijke vormgeving**
+   Alle GitHub Pages sites moeten dezelfde vormgeving hebben.
    a. Stel we besluiten om zowel het gebruik van Jekyll als Docusaurus toe te staan dan moet een bezoeker van de GitHub Pages sites qua vormgeving niet zien met welke static site generator de site gegenereerd is.
       De vormgeving van de Docusaurus site moet dan aangepast worden aan de vormgeving van de Jekyll sites of andersom. Wel mag de functionalteit natuurlijk afwijken.
    b. Stel we besluiten dat alle sites omgebouwd moeten worden naar Docusaurus dan mag een gehele nieuwe vormgeving geïntroduceerd worden maar moeten alle sites ook in een betrekkelijk korte periode over op Docusaurus.
@@ -10,15 +11,18 @@
    Optie 2 heeft de voorkeur aangezien die ons niet verplicht om de CSS voor Jekyll dan wel voor Docusaurus aan te passen en ook omdat ik verwacht dat het erg lastig wordt bepaalde vormgevingen hetzelfde te krijgen.
    Om een voorbeeld te noemen, kijk naar hoe Swagger en Redocly zijn geïntegreerd in Jekyll en kijk hoe dat bij Docusaurus het geval is. Bij Docusaurus ontbreekt overigens (op dit moment) alle integratie van Redocly.
 
-2. Het gebruik van Docusaurus moet redelijk eenvoudig uit te leggen zijn en het gebruik moet zo makkelijk mogelijk gemaakt kunnen worden.
+3. **Eenvoudig uit te leggen**
+   Het gebruik van Docusaurus moet redelijk eenvoudig uit te leggen zijn en het gebruik moet zo makkelijk mogelijk gemaakt kunnen worden.
    Het gebruik van Jekyll is indertijd met een presentatie uitgelegd op basis waarvan het diverse personen inderdaad gelukt is een site in elkaar te zetten. Zoiets moet, als we Docusaurus gaan gebruiken, ook nu weer het geval zijn.
    We moeten niet willen dat collega's zich eerst diep in Docusaurus moeten verdiepen voordat ze er een site mee kunnen genereren. Liefst creëren we een template op basis waarvan redelijk eenvoudig een site in elkaar te zetten is.
    Daarbij moet bepaalde functionaliteit eenvoudig aan of uitgezet kunnen worden.
 
-3. De structuur van de Docusaurus site moet voldoen aan de in '[Uniformering GitHub Pages](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Uniformering/Index.md)' beschreven structuur.
+4. **Structuur conform Uniformering GitHub Pages**
+   De structuur van de Docusaurus site moet voldoen aan de in '[Uniformering GitHub Pages](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Uniformering/Index.md)' beschreven structuur.
    Zo nodig kan natuurlijk besloten worden die structuur aan te passen aan de nieuwe fuhctionaliteit. De navigatiestructuur vanuit de top navigatie mag niet ineens zonder een evident voordeel sterk wijzigen, liefst blijft deze ongeveer gelijk en dus herkenbaar. Gebruikers zijn immers gewend aan de huidige structuur en vinden daarin hun weg.
 
-4. De top navigatie moet centraal geconfigureerd en beheerd kunnen worden.
+5. **Centrale configuratie top navigatie**
+   De top navigatie moet centraal geconfigureerd en beheerd kunnen worden.
    De ZGW implementeert nu een top navigatie die alleen betrekking heeft op de ZGW API standaarden. De ZGW API standaarden maken echter deel uit van een familie van VNG Realisatie standaarden en de topnavigatie vormt een portaal van waaruit je de GitHub Pages sites van al die standaarden kunt bereiken.
 
 Op dit moment wordt n.m.m. nog niet aan voorwaarde 2, 3 en 4 voldaan. 
