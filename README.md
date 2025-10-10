@@ -27,15 +27,16 @@
 
 Op dit moment wordt n.m.m. nog niet aan voorwaarde 2, 3 en 4 voldaan. 
 
-2. De werking van Docusaurus is voor zover ik nu kan beoordelen niet echt intuïtief, complex en zelfs enigzins ondoorgrondelijk. Ik kan het in ieder geval nog niet goed en eenvoudig uitleggen;
+2. De werking van Docusaurus is voor zover ik nu kan beoordelen niet echt intuïtief, complex en zelfs enigzins ondoorgrondelijk. Na me er flink in verdiept te hebben begin ik er gevoel voor te krijgen maar het stadium dat ik het zo eenvoudig kan uitleggen dat anderen er zonder er al te veel tijd in gestoken te hebben mee vooruit kunnen is nog niet bereikt;
 3. De structuur zoals nu opgezet voor ZGW voldoet niet aan wat is vastgelegd in '[Uniformering GitHub Pages](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Uniformering/Index.md)'.
-   Voor de ZGW site is nu gekozen voor een top navigatie menu die alleen betrekking heeft op de ZGW API's. In de Jekyll versie maakt de ZGW site echter onderdeel uit van het grotere geheel van de VNG Realisatie Standaarden portaal. Natuurlijk kunnen we dat in Docusaurus ook realiseren maar dat heeft 3 nadelen:
-4. De configuratie van het top navigatie menu gebeurd in het ZGW voorbeeld niet centraal.
+   Voor de ZGW site is nu gekozen voor een top navigatie menu die alleen betrekking heeft op de ZGW API's. In de Jekyll versie maakt de ZGW site echter onderdeel uit van het grotere geheel van de VNG Realisatie Standaarden portaal. Natuurlijk kunnen we proberen dat in Docusaurus ook realiseren maar daarbij hebben we nog wel wat uitdagingen te overwinnen;
+4. De configuratie van het top navigatie menu gebeurd, tenminste in het ZGW voorbeeld, niet centraal.
    Bij Jekyll is dat wel het geval. Daar wordt door de GitHub repositories die Jekyll implementeren gebruik gemaakt van Jekyll themes waarin de top navigatie is geconfigureerd.
    Dat de top navigatie niet centraal geconfigureerd kan worden heeft de volgende nadelen:
    -  Het topnavigatiemenu moet in elke GitHub repo die Docusaurus implementeert apart geconfigureerd worden wat foutgevoelig is. Bij die configuratie kunnen fouten gemaakt worden waardoor de topnavigatie bij de ene Docusaurus site afwijkt van die van de andere.
    -  Als er wijzigingen in de topnavigatie moeten worden aangebracht moeten deze worden doorgevoerd in alle GitHub repositories waarmee Docusaurus wordt geïmplementeerd.
-   Inmiddels is het me gelukt om de configuratie van topnavigatie (in de vorm zoals we deze kennen) in een aparte repository te plaatsen en deze op te halen. In die top navigatie balk staan echter nog steeds componenten die te maken hebben met de ZGW API's en ik moet nog uitzoeken hoe we dat deel wel lokaal kunnen plaatsen.
+
+   Inmiddels zijn de eerste experimenten om de configuratie van topnavigatie (in de vorm zoals we deze kennen) in een aparte repository te plaatsen en deze op te halen hoopgevend (zie [hier](https://github.com/melsk-r/Docusaurus-test/edit/main/README.md#experimenteren-met-de-zgw-aps-docusaurus-site)). Bij die experimenten staan in die top navigatie balk echter nog steeds componenten die te maken hebben met de ZGW API's en er moet nog uitgezocht worden hoe we dat deel wel lokaal kunnen plaatsen.
 
 ## Verkenningen van Docusaurus
 
