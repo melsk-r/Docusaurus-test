@@ -27,7 +27,7 @@
 
 Op dit moment wordt n.m.m. nog niet aan voorwaarde 2, 3 en 4 voldaan. 
 
-2. De werking van Docusaurus is voor zover ik nu kan beoordelen niet echt intuïtief, complex en zelfs enigzins ondoorgrondelijk. Na me er flink in verdiept te hebben begin ik er gevoel voor te krijgen maar het stadium dat ik het zo eenvoudig kan uitleggen dat anderen er zonder er al te veel tijd in gestoken te hebben mee vooruit kunnen is nog niet bereikt;
+2. De werking van Docusaurus is voor zover ik nu kan beoordelen niet echt intuïtief, complex en zelfs enigzins ondoorgrondelijk. Na me er flink in verdiept te hebben begin ik er gevoel voor te krijgen en worden me dingen duidelijk maar het stadium dat ik het zo eenvoudig kan uitleggen dat anderen er zonder er al te veel tijd in gestoken te hebben mee vooruit kunnen is nog niet bereikt;
 3. De structuur zoals nu opgezet voor ZGW voldoet niet aan wat is vastgelegd in '[Uniformering GitHub Pages](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Uniformering/Index.md)'.
    Voor de ZGW site is nu gekozen voor een top navigatie menu die alleen betrekking heeft op de ZGW API's. In de Jekyll versie maakt de ZGW site echter onderdeel uit van het grotere geheel van de VNG Realisatie Standaarden portaal. Natuurlijk kunnen we proberen dat in Docusaurus ook realiseren maar daarbij hebben we nog wel wat uitdagingen te overwinnen;
 4. De configuratie van het top navigatie menu gebeurd, tenminste in het ZGW voorbeeld, niet centraal.
