@@ -1,5 +1,11 @@
 # Analyse Docusaurus implementatie voor ZGW en uitrol naar andere repositories
 
+* [Voorwaarden voor een evt. invoering van Docusaurus](https://github.com/melsk-r/Docusaurus-test/blob/main/README.md#voorwaarden-voor-een-evt-invoering-van-docusaurus)
+* [Verkenningen van docusaurus](https://github.com/melsk-r/Docusaurus-test/blob/main/README.md#verkenningen-van-docusaurus)
+  - [Experimenten vanaf scratch](https://github.com/melsk-r/Docusaurus-test/blob/main/README.md#experimenten-vanaf-scratch)
+  - [Analyse ZGW API's Docusaurus site](https://github.com/melsk-r/Docusaurus-test/blob/main/README.md#analyse-zgw-apis-docusaurus-site)
+  - [Experimenteren met de ZGW API's Docusaurus site](https://github.com/melsk-r/Docusaurus-test/blob/main/README.md#experimenteren-met-de-zgw-aps-docusaurus-site)
+
 ## Voorwaarden voor een evt. invoering van Docusaurus
 
 1. **Gelijke vormgeving**<br/>
