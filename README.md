@@ -26,12 +26,12 @@ Op dit moment wordt n.m.m. nog niet aan voorwaarde 2, 3 en 4 voldaan.
 2. De werking van Docusaurus is voor zover ik nu kan beoordelen niet echt intuïtief, complex en zelfs enigzins ondoorgrondelijk. Ik kan het in ieder geval nog niet goed en eenvoudig uitleggen;
 3. De structuur zoals nu opgezet voor ZGW voldoet niet aan wat is vastgelegd in '[Uniformering GitHub Pages](https://github.com/VNG-Realisatie/API-Kennisbank/blob/master/Uniformering/Index.md)'.
    Voor de ZGW site is nu gekozen voor een top navigatie menu die alleen betrekking heeft op de ZGW API's. In de Jekyll versie maakt de ZGW site echter onderdeel uit van het grotere geheel van de VNG Realisatie Standaarden portaal. Natuurlijk kunnen we dat in Docusaurus ook realiseren maar dat heeft 3 nadelen:
-4. De configuratie van het top navigatie menu gebeurd niet centraal, tenminste voor zover ik nu kan overzien.
+4. De configuratie van het top navigatie menu gebeurd in het ZGW voorbeeld niet centraal.
    Bij Jekyll is dat wel het geval. Daar wordt door de GitHub repositories die Jekyll implementeren gebruik gemaakt van Jekyll themes waarin de top navigatie is geconfigureerd.
    Dat de top navigatie niet centraal geconfigureerd kan worden heeft de volgende nadelen:
    -  Het topnavigatiemenu moet in elke GitHub repo die Docusaurus implementeert apart geconfigureerd worden wat foutgevoelig is. Bij die configuratie kunnen fouten gemaakt worden waardoor de topnavigatie bij de ene Docusaurus site afwijkt van die van de andere.
    -  Als er wijzigingen in de topnavigatie moeten worden aangebracht moeten deze worden doorgevoerd in alle GitHub repositories waarmee Docusaurus wordt geïmplementeerd.
-  
+   Inmiddels is het me gelukt om de configuratie van topnavigatie (in de vorm zoals we deze kennen) in een aparte repository te plaatsen en deze op te halen. In die top navigatie balk staan echter nog steeds componenten die te maken hebben met de ZGW API's en ik moet nog uitzoeken hoe we dat deel wel lokaal kunnen plaatsen.
 
 ## Verkenningen van Docusaurus
 
@@ -108,7 +108,7 @@ Indien m.b.v. `npm run docusaurus docs:version [versienummer]` een versie van de
 * Wijzig het versienummer in de foldernaam ´[Repository-naam]\my-website\versioned_docs\version-[versienummer]´;
 * Wijzig het versienummer in de bestandsnaam ´[Repository-naam]\my-website\versioned_sidebars\version-[versienummer]-sidebars.json´.
 
-### Experimenteren met de ZGW-AP's Docusaurus site
+### Uitleg ZGW-AP's Docusaurus site
 De folderstructuur van de ZGW Docusaurus GitHub repo ziet er, als we de folders 
 * .devcontainer
 * .docusaurus
@@ -173,11 +173,14 @@ In het Docusaurus configuratiebestand `docusaurus.config.ts` staat echter:
 17.    ],
 18.  ],
 ```
-Ik vermoed dat deze code iets te maken heeft met het vertalen van de `openapi.yaml' naar de MDX bestanden in de `docs/v1/autorisatie` folder. Regel 8 verwijst dan naar
-Toch worden de MDX bestanden niet geüpdate als ik een nieuwe build maak.
+Ik vermoed dat deze code iets te maken heeft met het vertalen van de `openapi.yaml' naar de MDX bestanden in de `docs/v1/autorisatie` folder. Regel 8 verwijst dan naar het openapi.yaml bestand dat verwerkt moet worden. Desondanks worden de MDX bestanden niet geüpdate als ik een nieuwe build maak. Dit vergt nog uitzoekwerk. 
+
+***Actie:*** navragen bij Rutger hoe dit werkt.
 
 **api-specificatie**<br/>
 Deze folder en diens subfolders (hier niet weergegeven) lijken geen rol te spelen bij het genereren van de site. Wijzigingen aangebracht in de OAS specificatie `api-specificatie/ac/openapi.yaml` leiden nl. niet tot wijzigingen in de site. Dat is ook niet het geval na een handmatige rebuild van de site.
+
+***Actie:*** navragen bij Rutger wat de functie is van deze folder.
 
 **docs**<br/>
 In de onderliggende folders van deze folder vinden we een aantal markdown bestanden maar in de folder `docs/v1/autorisaties` ook een aantal MDX bestanden (een formaat dat Markdown-tekst combineert met JSX-componenten oftewel JavaScript XML componenten wat een syntaxisuitbreiding is voor JavaScript die het mogelijk maakt om HTML-achtige code te schrijven binnen JavaScript-bestanden) alsmede het bestand `sidebar.ts`.
@@ -186,13 +189,14 @@ In de subfolder `docs/unversioned` staan bestanden die onafhankelijk zijn van ee
 Naar de bestanden `index.md` in de subfolders `docs/unversioned/community` en `docs/unversioned/gids` wordt vanuit de top navigatie items 'Gids' en 'Community' gelinkt. De andere bestanden in deze folders kunnen daarna benadert worden via de side navigatie.
 
 De bestanden in de folder de folder `docs/v1/autorisaties` zijn gerelateerd aan API versie 1.6.0. 
-Hoe de MDX bestanden vervaardigd zijn is nog de vraag. Vermoedelijk en ook hopelijk zijn deze gegenereerd. Hoe moet nog uitgezocht worden.
+Hoe de MDX bestanden vervaardigd zijn is nog de vraag. Vermoedelijk en ook hopelijk zijn deze gegenereerd. Hoe moet dus nog uitgezocht worden.
+
 Op het eveneens in deze folder aanwezige bestand `sidebar.ts` kom ik hieronder terug.
 
 **sidebars**<br/>
-Het bestand `v1.ts` configureert de sidebar die verschijnt als wordt gekozen voor versie 1.6.0 van de API specificaties. Overigens wordt in dit bestand niet alleen de side bar geconfigureert maar ook de body van de pagina voor de categorie niveau's van de side bar. Verder wordt in dit betand het bestand `docs/v1/autorisaties/sidebar.ts` geïmporteerd.
+Het bestand `v1.ts` configureert de sidebar die verschijnt als wordt gekozen voor versie 1.6.0 van de API specificaties. Overigens wordt in dit bestand niet alleen de side bar geconfigureerd maar ook de body van de pagina voor de categorie niveau's van de side bar. Verder wordt in dit bestand het bestand `docs/v1/autorisaties/sidebar.ts` geïmporteerd.
 
-Ik heb getest of ik die import kon uitschakelen maar dat is om de e.o.a. reden nog niet gelukt. Waarom niet is me niet duidelijk. Het is i.i.g. niet eenvoudig het vervangen van
+Ik heb getest of ik die import kon uitschakelen maar dat is om de e.o.a. reden (nog) niet gelukt. Waarom niet is me niet duidelijk. Het is i.i.g. niet eenvoudig het vervangen van
 
 ``` yaml
           type: "category",
@@ -257,13 +261,25 @@ De startpagina van het Classic Docusaurus theme, het enige dat op dit moment bes
 * Een footerframe bestaande uit de brede grijze balk onderaan met daarin de 3 kolommen 'Standaard', 'Project' en 'Context';
 * Het tussen deze beide frames gelegen bodyframe met daarin inhoudelijke componenten.
 
-Het headerframe en bodyframe is alleen op deze pagina te zien. Het Footerframe blijft altijd zichtbaar.
+Het headerframe en bodyframe is alleen op de startpagina van het Classic Docusaurus theme te zien. Het Footerframe blijft altijd zichtbaar.
 
 De vulling van het bodyframe wordt in de folder 'src' geregeld. 
 * Het bestand `src/components/HonepageFeatures/index.js` bevat Javascript code waarmee het Feature deel van het bodyframe wordt gevuld. De teksten, de titels en de bijbehorende images van de features worden hier gedefinieerd;
 * Het bestand `src/pages/index.js` combineert het resultaat van het voorgaande bestand met de andere in de bodyframe voorkomende componenten. Daarbij wordt o.a gebruik gemaakt van enkele in het bestand `docusaurus.config.ts` geconfigureerde properties.
 
-Door aan het laatste bestand de functie `ZGWtopnavigatie'
+**static**<br/>
+De folder `static/img` bevat de diverse in de site gebruikte svg bestanden.
+
+**v1_versioned_docs**<br/>
+
+**v1_versioned_sidebars**<br/>
+
+**Root folder**<br/>
+
+#### Experimenteren met de ZGW-AP's Docusaurus site
+
+**src**<br/>
+Door aan het bestand `docusaurus.config.ts` de functie `ZGWtopnavigatie'
 
 ```javascript
 function ZGWtopnavigatie() {
@@ -311,10 +327,4 @@ export default function Home() {
 
 Lukt het om een extra topnavigatie niveau toe te voegen waarmee de standaard topnavigatie gebruikt zou kunnen worden voor de VNG-Realisatie Standaarden portaal functie. Helaas is deze alleen op deze pagina beschikbaar.
 
-**static**<br/>
-De folder `static/img` bevat de diverse in de site gebruikte svg bestanden.
-
-**v1_versioned_docs**<br/>
-
-**v1_versioned_sidebars**<br/>
-
+**Root folder**
