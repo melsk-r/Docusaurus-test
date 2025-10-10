@@ -338,7 +338,9 @@ export default function Home() {
 ```
 
 Lukt het om een extra topnavigatie niveau toe te voegen.
-<img width="284" height="55" alt="image" src="https://github.com/user-attachments/assets/11ecc6d6-d77c-4ff7-910d-4014e18709c7" />
+
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/11ecc6d6-d77c-4ff7-910d-4014e18709c7" />
+
 Daarmee zou de standaard topnavigatie gebruikt kunnen worden voor de VNG-Realisatie Standaarden portaal functie. Helaas is deze extra topnavigatie alleen op deze pagina beschikbaar.
 
 ***Actie:*** Kijken hoe we deze extra topnavigatie op alle poagina's kunnen tonen of een alternatief daarvoor verzinnen.
@@ -452,8 +454,8 @@ Op de volgende wijze kan de configuratie van de top navigatie centraal geregeld 
 
 Bij opnieuw builden van de site krijg je nu de volgende top navigatie te zien die centraal kan worden beheerd.
 
-Zoals je ziet staan in de top navigatie balk nog steeds componenten die te maken hebben met de ZGW API's en er moet nog uitgezocht worden hoe we dat deel wel lokaal kunnen plaatsen.
+<img width="1073" height="137" alt="image" src="https://github.com/user-attachments/assets/bf8d9566-3905-48b2-afdc-0a43a26a1a61" />
 
-***Actie:*** Uitzoeken hoe we de met ZGW-API's gerelateerde componenten in de top navigatie lokaal kunnen plaatsen of hoe we, als we het acceptabel vinden dat die componenten gewoon in de topnaviagtie balk staan, het genereren van de top navigatie zo kunnen inrichten dat deze componenten alleen bij de site van de bijbehorende repositories worden gegenereerd. 
+Zoals je ziet staan rechts in de top navigatie balk nog steeds enkele componenten die te maken hebben met de ZGW API's (het versies pull-down menu en de link naar de gemma-zaken repository) en er moet nog uitgezocht worden hoe we dat deel wel lokaal kunnen plaatsen.
 
- 
+***Actie:*** Uitzoeken hoe we de met ZGW-API's gerelateerde componenten in de top navigatie lokaal kunnen plaatsen of hoe we, als we het acceptabel vinden dat die componenten gewoon in de topnavigatie balk staan, het genereren van de top navigatie zo kunnen inrichten dat deze componenten alleen bij de site van de bijbehorende repositories worden gegenereerd. 
