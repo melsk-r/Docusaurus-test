@@ -418,7 +418,8 @@ Op de volgende wijze kan de configuratie van de top navigatie centraal geregeld 
 	  "logo": {
 	    "alt": "VNG logo",
 	    "src": "img/vng_logo.svg",
-	    "srcDark": "img/vng_logo_alt.svg"
+	    "srcDark": "img/vng_logo_alt.svg",
+        "href": "https://vng-realisatie.github.io/Standaarden/index"
 	  },
 	 "items": [
 	    {
@@ -460,6 +461,12 @@ Op de volgende wijze kan de configuratie van de top navigatie centraal geregeld 
 	}   
    ```
    **LET OP!** Dit moet echt json formaat zijn, het yaml formaat waarin de top navigatie in het bestand 'docusaurus.config.ts' is geconfigureerd leidt nl. tot fouten.
+
+   Door het toevoegen van de zevende regel van dit bestand
+
+   `"href": "https://vng-realisatie.github.io/Standaarden/index"`
+
+   Zorgen we er voor dat het logo en de daarachter staande tekst niet langer linkt naar de ZGW-API's zite maar naar het VNG Realisatie Standaarden portaal. Deze is nu natuurlijk nog met Jekyll vervaardigd maar zou dan natuurlijk ook op basis van Docusaurus opgezet moeten worden.
 
 Bij opnieuw builden van de site krijg je nu de volgende top navigatie te zien die centraal kan worden beheerd.
 
