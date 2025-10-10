@@ -253,11 +253,17 @@ De vulling van het bodyframe wordt in de folder 'src' geregeld.
 * Het bestand `src/pages/index.js` combineert het resultaat van het voorgaande bestand met de andere in de bodyframe voorkomende componenten. Daarbij wordt o.a gebruik gemaakt van enkele in het bestand `docusaurus.config.ts` geconfigureerde properties.
 
 #### static
-De folder `static/img` bevat de diverse in de site gebruikte svg bestanden.
+De folder `static/img` bevat de diversen in de site gebruikte svg bestanden.
 
 #### v1_versioned_docs
+De inhoud van deze folder bevat, in de subfolder `version-1.5.1` de versieafhankelijke delen voor versie 1.5.1. Deze is gegenereerd op de wijze zoals uitgelegd in [de paragraaf die gewijd is aan het versions](https://github.com/melsk-r/Docusaurus-test/blob/main/README.md#versions). Het in die paragraaf beschreven command genereert echter het bestand ´[Repository-naam]\my-website\versions.json´ terwijl hier dat bestand de naam ´v1_versions.json´ heeft.
+
+Eveneens vreemd is het voorkomen van het bestand `sidebar.ts` in de subfolder `version-1.5.1/autorisaties`. Bij het testen van het genereren van versies (zie de eerdere link) werd dit bestand niet gegenereerd. Opvallend is ook dat de inhoud van dit bestand 1 op 1, alleen dan in json formaat, terugkomt in het bestand `version-1.5.1-sidebars.json` dat in de folder `v1_versioned_sidebars` staat.
+
+***Actie:*** navragen bij Rutger hoe hij dit voor elkaar heeft gekregen en waarom het bestand die naam heeft. Is het de bedoeling om straks als versie 2.1.0 uit is ook een bestand met de naam ´v2_versions.json´ te creëren. Tevens laten uitleggen waarom het bestand `sidebar.ts` aanwezig is.
 
 #### v1_versioned_sidebars
+In deze folder staat het bestand `version-1.5.1-sidebars.json` waarin de sidebar configuratie staat voor de situatie als gekozen is voor versie 1.5.1. van de ZGW-API's.
 
 #### Root folder
 
