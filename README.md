@@ -459,3 +459,4 @@ Bij opnieuw builden van de site krijg je nu de volgende top navigatie te zien di
 Zoals je ziet staan rechts in de top navigatie balk nog steeds enkele componenten die te maken hebben met de ZGW API's (het versies pull-down menu en de link naar de gemma-zaken repository) en er moet nog uitgezocht worden hoe we dat deel wel lokaal kunnen plaatsen.
 
 ***Actie:*** Uitzoeken hoe we de met ZGW-API's gerelateerde componenten in de top navigatie lokaal kunnen plaatsen of hoe we, als we het acceptabel vinden dat die componenten gewoon in de topnavigatie balk staan, het genereren van de top navigatie zo kunnen inrichten dat deze componenten alleen bij de site van de bijbehorende repositories worden gegenereerd. 
+Het logo en de tekst 'VNG Realisatie Standaarden' linkt overigens nog naar de ZGW-API's site terwijl die zou moeten linken naar de VNG Realisatie Standaarden portaal. Ook daar ligt nog wat uitzoek werk.
