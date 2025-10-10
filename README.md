@@ -153,7 +153,7 @@ GEMMA-Zaken
 
 Laten we de folders even een voor 1 aflopen.
 
-**api-specs**<br/>
+#### api-specs
 Deze folder en diens subfolders (hier niet weergegeven) lijken geen rol te spelen bij het genereren van de site. Wijzigingen aangebracht in de OAS specificatie `api-specs/v1/autorisaties/openapi.yaml` leiden nl. niet tot wijzigingen in de site. Dat is ook niet het geval na een handmatige rebuild van de site.
 
 In het Docusaurus configuratiebestand `docusaurus.config.ts` staat echter:
@@ -182,12 +182,12 @@ Ik vermoed dat deze code iets te maken heeft met het vertalen van de `openapi.ya
 
 ***Actie:*** navragen bij Rutger hoe dit werkt.
 
-**api-specificatie**<br/>
+#### api-specificatie
 Deze folder en diens subfolders (hier niet weergegeven) lijken geen rol te spelen bij het genereren van de site. Wijzigingen aangebracht in de OAS specificatie `api-specificatie/ac/openapi.yaml` leiden nl. niet tot wijzigingen in de site. Dat is ook niet het geval na een handmatige rebuild van de site.
 
 ***Actie:*** navragen bij Rutger wat de functie is van deze folder.
 
-**docs**<br/>
+#### docs
 In de onderliggende folders van deze folder vinden we een aantal markdown bestanden maar in de folder `docs/v1/autorisaties` ook een aantal MDX bestanden (een formaat dat Markdown-tekst combineert met JSX-componenten oftewel JavaScript XML componenten wat een syntaxisuitbreiding is voor JavaScript die het mogelijk maakt om HTML-achtige code te schrijven binnen JavaScript-bestanden) alsmede het bestand `sidebar.ts`.
 
 In de subfolder `docs/unversioned` staan bestanden die onafhankelijk zijn van een van de API versies. Om te beginnen 3 markdown bestanden waar in de footer van de site naar verwezen wordt. Voor het markdown bestand in de subfolder `docs/unversioned/adrs` geldt hetzelfde.
@@ -198,7 +198,7 @@ Hoe de MDX bestanden vervaardigd zijn is nog de vraag. Vermoedelijk en ook hopel
 
 Op het eveneens in deze folder aanwezige bestand `sidebar.ts` kom ik hieronder terug.
 
-**sidebars**<br/>
+#### sidebars
 Het bestand `v1.ts` configureert de sidebar die verschijnt als wordt gekozen voor versie 1.6.0 van de API specificaties. Overigens wordt in dit bestand niet alleen de side bar geconfigureerd maar ook de body van de pagina voor de categorie niveau's van de side bar. Verder wordt in dit bestand het bestand `docs/v1/autorisaties/sidebar.ts` geïmporteerd.
 
 Ook het bestand `unversioned.ts' staat in deze folder. Het configureert de sidebar voor de pagina's die in de folder `docs/unversioned' staan. Dus voor de situaties als in de top navigatie gekozen is voor 'Gids' en 'Community' of in de footer voor 'Over de ZGW API standaard', 'Besluitenlogboek', 'Doe mee', 'Contact' en 'Praktijkvoorbeelden'. Het koppelen van dit sidebar bestand aan alles in die folder gebeurd in `docusaurus.config.ts`. Daar staat nl.
@@ -240,7 +240,7 @@ M.n. de regels 7 en 9 zijn hierbij van belang. De functie `require.resolve` in r
 ```
 Zie regels 6 en 8.
 
-**src**<br/>
+#### src
 De startpagina van het Classic Docusaurus theme, het enige dat op dit moment beschikbaar is, bestaat uit 3 delen:
 * Een headerframe met daarin o.a. de top navigatie en de button om naar de verschillende versies van de ZGW-API specificaties te gaan;
 * Een footerframe bestaande uit de brede grijze balk onderaan met daarin de 3 kolommen 'Standaard', 'Project' en 'Context';
@@ -252,18 +252,18 @@ De vulling van het bodyframe wordt in de folder 'src' geregeld.
 * Het bestand `src/components/HonepageFeatures/index.js` bevat Javascript code waarmee het Feature deel van het bodyframe wordt gevuld. De teksten, de titels en de bijbehorende images van de features worden hier gedefinieerd;
 * Het bestand `src/pages/index.js` combineert het resultaat van het voorgaande bestand met de andere in de bodyframe voorkomende componenten. Daarbij wordt o.a gebruik gemaakt van enkele in het bestand `docusaurus.config.ts` geconfigureerde properties.
 
-**static**<br/>
+#### static
 De folder `static/img` bevat de diverse in de site gebruikte svg bestanden.
 
-**v1_versioned_docs**<br/>
+#### v1_versioned_docs
 
-**v1_versioned_sidebars**<br/>
+#### v1_versioned_sidebars
 
-**Root folder**<br/>
+#### Root folder
 
 ### Experimenteren met de ZGW-AP's Docusaurus site
 
-**sidebars**<br/>
+#### sidebars
 Ik heb getest of ik de import van het bestand `docs/v1/autorisaties/sidebar.ts` in het bestand `v1.ts` kon uitschakelen maar dat is om de e.o.a. reden (nog) niet gelukt. Waarom niet is me niet duidelijk. Het is i.i.g. niet eenvoudig het vervangen van
 
 ``` yaml
@@ -284,7 +284,7 @@ door
           id: "index",
 ```
 
-**src**<br/>
+#### src
 Door aan het bestand `docusaurus.config.ts` de functie `ZGWtopnavigatie'
 
 ```javascript
@@ -333,7 +333,7 @@ export default function Home() {
 
 Lukt het om een extra topnavigatie niveau toe te voegen waarmee de standaard topnavigatie gebruikt zou kunnen worden voor de VNG-Realisatie Standaarden portaal functie. Helaas is deze alleen op deze pagina beschikbaar.
 
-**Root folder**
+#### Root folder
 Op de volgende wijze kan de configuratie van de top navigatie centraal geregeld worden.
 
 1. Wijzig in het bestand 'docusaurus.config.ts' de navbar property
@@ -352,7 +352,7 @@ Op de volgende wijze kan de configuratie van de top navigatie centraal geregeld 
      return config;
    }
    ```
-   in dat zelfde bestand in
+   in dat zelfde bestand, in
    ```yaml
    export default async function createConfig(): Promise<Config> {
      try {
@@ -438,7 +438,7 @@ Op de volgende wijze kan de configuratie van de top navigatie centraal geregeld 
 	  ]
 	}   
    ```
-   **LET OP!** Dit moet echt json zijn en geen yaml.
+   **LET OP!** Dit moet echt json formaat zijn, het yaml formaat waarin de top navigatie in het bestand 'docusaurus.config.ts' is geconfigureerd leidt tot fouten.
 
 Bij opnieuw builden van de site krijg je nu een top navigatie te zien die centraal kan worden beheerd.
 
