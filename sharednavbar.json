@@ -3,7 +3,8 @@
   "logo": {
     "alt": "VNG logo",
     "src": "img/vng_logo.svg",
-    "srcDark": "img/vng_logo_alt.svg"
+    "srcDark": "img/vng_logo_alt.svg",
+    "href": "https://vng-realisatie.github.io/Standaarden/index"
   },
  "items": [
     {
