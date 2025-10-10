@@ -108,7 +108,7 @@ Indien m.b.v. `npm run docusaurus docs:version [versienummer]` een versie van de
 * Wijzig het versienummer in de foldernaam ´[Repository-naam]\my-website\versioned_docs\version-[versienummer]´;
 * Wijzig het versienummer in de bestandsnaam ´[Repository-naam]\my-website\versioned_sidebars\version-[versienummer]-sidebars.json´.
 
-### Uitleg ZGW-AP's Docusaurus site
+### Analyse ZGW-AP's Docusaurus site
 De folderstructuur van de ZGW Docusaurus GitHub repo ziet er, als we de folders 
 * .devcontainer
 * .docusaurus
