@@ -308,7 +308,7 @@ door
 Ik heb hier op verschillende manier gespeeld met de topnavigatie.
 
 ***Door een extra navigatiebalk in de body te plaatsen***<br/>
-Door aan het bestand `docusaurus.config.ts` de functie `ZGWtopnavigatie'
+Door aan het bestand `src/index.js` de functie `ZGWtopnavigatie'
 
 ```javascript
 function ZGWtopnavigatie() {
@@ -359,8 +359,6 @@ Lukt het om een extra topnavigatie niveau toe te voegen.
 <img width="400" alt="image" src="https://github.com/user-attachments/assets/11ecc6d6-d77c-4ff7-910d-4014e18709c7" />
 
 Daarmee zou de standaard topnavigatie gebruikt kunnen worden voor de VNG-Realisatie Standaarden portaal functie. Helaas is deze extra topnavigatie alleen op de startpagina van het Classic Docusaurus theme beschikbaar.
-
-***Actie:*** Kijken hoe we deze extra topnavigatie op alle pagina's kunnen tonen of een alternatief daarvoor verzinnen.
 
 ***Door aan de top navigatiebalk een extra regel toe te voegen***<br/>
 Daartoe heb ik aan deze folder `theme/Navbar/index.tsx` toegevoegd. Voor de inhoud heb ik de originele Navbar broncode gekopieerd en aan dat bestand toegevoegd. Daaraan heb ik vervolgens extra code toegevoegd
