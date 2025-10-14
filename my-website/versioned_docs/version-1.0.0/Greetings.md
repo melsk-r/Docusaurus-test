@@ -3,5 +3,3 @@ sidebar_position: 5
 ---
 
 # Greetings
-
-Hello!
