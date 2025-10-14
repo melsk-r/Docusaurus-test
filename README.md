@@ -531,3 +531,10 @@ Bij opnieuw builden van de site krijg je nu de volgende top navigatie te zien di
 Zoals je ziet staan rechts in de top navigatie balk nog steeds enkele componenten die te maken hebben met de ZGW API's (het versies pull-down menu en de link naar de gemma-zaken repository) en er moet nog uitgezocht worden hoe we dat deel wel lokaal kunnen plaatsen.
 
 ***Actie:*** Uitzoeken hoe we de met ZGW-API's gerelateerde componenten in de top navigatie lokaal kunnen plaatsen of hoe we, als we het acceptabel vinden dat die componenten gewoon in de topnavigatie balk staan, het genereren van de top navigatie zo kunnen inrichten dat deze componenten alleen bij de site van de bijbehorende repositories worden gegenereerd. 
+
+## Openstaande vragen
+
+* Welke folders en bestanden zijn minimaal nodig om de Docusaurus site werkende te krijgen? Wat moet dus minimaal aanwezig zijn in een evt. template?
+* Moet de in de voorgaande bullet bedoelde folderstructuur persé in de root staan of is het ook denkbaar deze structuur binnen een andere folder in de root te plaatsen?
+* Moet een Docusaurus site altijd met een actionscript gebuild worden of kan dit ook door een deploy vanaf een branch?
+* Indien het met een Action script moet. Hoe krijg je dat werkende beginnend vanaf een lege repo (of een m.b.v. een template repo veraardigde repo)?
