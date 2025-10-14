@@ -5,6 +5,7 @@
   - [Experimenten vanaf scratch](https://github.com/melsk-r/Docusaurus-test/blob/main/README.md#experimenten-vanaf-scratch)
   - [Analyse ZGW API's Docusaurus site](https://github.com/melsk-r/Docusaurus-test/blob/main/README.md#analyse-zgw-apis-docusaurus-site)
   - [Experimenteren met de ZGW API's Docusaurus site](https://github.com/melsk-r/Docusaurus-test/blob/main/README.md#experimenteren-met-de-zgw-aps-docusaurus-site)
+* [Openstaande vragen](https://github.com/melsk-r/Docusaurus-test/blob/main/README.md#openstaande-vragen)
 
 ## Voorwaarden voor een evt. invoering van Docusaurus
 
